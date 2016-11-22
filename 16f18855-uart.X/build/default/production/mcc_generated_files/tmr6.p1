@@ -20,8 +20,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S919 . . ]
 "19557
 [v _PIR4bits `VS919 ~T0 @X0 0 e@1808 ]
-"435 mcc_generated_files/tmr6.h
-[v _TMR6_Start `(v ~T0 @X0 0 ef ]
 "93 mcc_generated_files/tmr6.c
 [c E13558 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 22 23 17 18 19 .. ]
 [n E13558 . TMR6_ROP_STARTS_TMRON TMR6_ROP_STARTS_TMRON_ERSHIGH TMR6_ROP_STARTS_TMRON_ERSLOW TMR6_ROP_RESETS_ERSBOTHEDGE TMR6_ROP_RESETS_ERSRISINGEDGE TMR6_ROP_RESETS_ERSFALLINGEDGE TMR6_ROP_RESETS_ERSLOW TMR6_ROP_RESETS_ERSHIGH TMR6_OS_STARTS_TMRON TMR6_OS_STARTS_ERSRISINGEDGE TMR6_OS_STARTS_ERSFALLINGEDGE TMR6_OS_STARTS_ERSBOTHEDGE TMR6_OS_STARTS_ERSFIRSTRISINGEDGE TMR6_OS_STARTS_ERSFIRSTFALLINGEDGE TMR6_OS_STARTS_ERSRISINGEDGEDETECT TMR6_OS_STARTS_ERSFALLINGEDGEDETECT TMR6_OS_STARTS_TMRON_ERSHIGH TMR6_OS_STARTS_TMRON_ERSLOW TMR6_MS_STARTS_TMRON_ERSRISINGEDGEDETECT TMR6_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT TMR6_MS_STARTS_TMRON_ERSBOTHEDGE  ]
@@ -12749,9 +12747,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 86: PIR4bits.TMR6IF = 0;
 "86
 [e = . . _PIR4bits 0 5 -> -> 0 `i `uc ]
-[; ;tmr6.c: 89: TMR6_Start();
-"89
-[e ( _TMR6_Start ..  ]
 [; ;tmr6.c: 90: }
 "90
 [e :UE 1519 ]
@@ -12833,159 +12828,159 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 118: T6CONbits.TMR6ON = 0;
 "118
 [e = . . _T6CONbits 3 7 -> -> 0 `i `uc ]
-[; ;tmr6.c: 119: }
+[; ;tmr6.c: 119: T6TMR = 0x00;
 "119
+[e = _T6TMR -> -> 0 `i `uc ]
+[; ;tmr6.c: 120: }
+"120
 [e :UE 1524 ]
 }
-"121
-[v _TMR6_StopTimer `(v ~T0 @X0 1 ef ]
 "122
+[v _TMR6_StopTimer `(v ~T0 @X0 1 ef ]
+"123
 {
-[; ;tmr6.c: 121: void TMR6_StopTimer(void)
-[; ;tmr6.c: 122: {
+[; ;tmr6.c: 122: void TMR6_StopTimer(void)
+[; ;tmr6.c: 123: {
 [e :U _TMR6_StopTimer ]
 [f ]
-[; ;tmr6.c: 123: TMR6_Stop();
-"123
-[e ( _TMR6_Stop ..  ]
-[; ;tmr6.c: 124: }
+[; ;tmr6.c: 124: TMR6_Stop();
 "124
+[e ( _TMR6_Stop ..  ]
+[; ;tmr6.c: 125: }
+"125
 [e :UE 1525 ]
 }
-"126
-[v _TMR6_Counter8BitGet `(uc ~T0 @X0 1 ef ]
 "127
+[v _TMR6_Counter8BitGet `(uc ~T0 @X0 1 ef ]
+"128
 {
-[; ;tmr6.c: 126: uint8_t TMR6_Counter8BitGet(void)
-[; ;tmr6.c: 127: {
+[; ;tmr6.c: 127: uint8_t TMR6_Counter8BitGet(void)
+[; ;tmr6.c: 128: {
 [e :U _TMR6_Counter8BitGet ]
 [f ]
-"128
+"129
 [v _readVal `uc ~T0 @X0 1 a ]
-[; ;tmr6.c: 128: uint8_t readVal;
-[; ;tmr6.c: 130: readVal = TMR6;
-"130
+[; ;tmr6.c: 129: uint8_t readVal;
+[; ;tmr6.c: 131: readVal = TMR6;
+"131
 [e = _readVal _TMR6 ]
-[; ;tmr6.c: 132: return readVal;
-"132
+[; ;tmr6.c: 133: return readVal;
+"133
 [e ) _readVal ]
 [e $UE 1526  ]
-[; ;tmr6.c: 133: }
-"133
+[; ;tmr6.c: 134: }
+"134
 [e :UE 1526 ]
 }
-"135
-[v _TMR6_ReadTimer `(uc ~T0 @X0 1 ef ]
 "136
+[v _TMR6_ReadTimer `(uc ~T0 @X0 1 ef ]
+"137
 {
-[; ;tmr6.c: 135: uint8_t TMR6_ReadTimer(void)
-[; ;tmr6.c: 136: {
+[; ;tmr6.c: 136: uint8_t TMR6_ReadTimer(void)
+[; ;tmr6.c: 137: {
 [e :U _TMR6_ReadTimer ]
 [f ]
-[; ;tmr6.c: 137: return TMR6_Counter8BitGet();
-"137
+[; ;tmr6.c: 138: return TMR6_Counter8BitGet();
+"138
 [e ) ( _TMR6_Counter8BitGet ..  ]
 [e $UE 1527  ]
-[; ;tmr6.c: 138: }
-"138
+[; ;tmr6.c: 139: }
+"139
 [e :UE 1527 ]
 }
-"140
+"141
 [v _TMR6_Counter8BitSet `(v ~T0 @X0 1 ef1`uc ]
-"141
+"142
 {
-[; ;tmr6.c: 140: void TMR6_Counter8BitSet(uint8_t timerVal)
-[; ;tmr6.c: 141: {
+[; ;tmr6.c: 141: void TMR6_Counter8BitSet(uint8_t timerVal)
+[; ;tmr6.c: 142: {
 [e :U _TMR6_Counter8BitSet ]
-"140
-[v _timerVal `uc ~T0 @X0 1 r1 ]
 "141
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"142
 [f ]
-[; ;tmr6.c: 143: TMR6 = timerVal;
-"143
-[e = _TMR6 _timerVal ]
-[; ;tmr6.c: 144: }
+[; ;tmr6.c: 144: TMR6 = timerVal;
 "144
+[e = _TMR6 _timerVal ]
+[; ;tmr6.c: 145: }
+"145
 [e :UE 1528 ]
 }
-"146
+"147
 [v _TMR6_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
-"147
-{
-[; ;tmr6.c: 146: void TMR6_WriteTimer(uint8_t timerVal)
-[; ;tmr6.c: 147: {
-[e :U _TMR6_WriteTimer ]
-"146
-[v _timerVal `uc ~T0 @X0 1 r1 ]
-"147
-[f ]
-[; ;tmr6.c: 148: TMR6_Counter8BitSet(timerVal);
 "148
-[e ( _TMR6_Counter8BitSet (1 _timerVal ]
-[; ;tmr6.c: 149: }
+{
+[; ;tmr6.c: 147: void TMR6_WriteTimer(uint8_t timerVal)
+[; ;tmr6.c: 148: {
+[e :U _TMR6_WriteTimer ]
+"147
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"148
+[f ]
+[; ;tmr6.c: 149: TMR6_Counter8BitSet(timerVal);
 "149
+[e ( _TMR6_Counter8BitSet (1 _timerVal ]
+[; ;tmr6.c: 150: }
+"150
 [e :UE 1529 ]
 }
-"151
+"152
 [v _TMR6_Period8BitSet `(v ~T0 @X0 1 ef1`uc ]
-"152
-{
-[; ;tmr6.c: 151: void TMR6_Period8BitSet(uint8_t periodVal)
-[; ;tmr6.c: 152: {
-[e :U _TMR6_Period8BitSet ]
-"151
-[v _periodVal `uc ~T0 @X0 1 r1 ]
-"152
-[f ]
-[; ;tmr6.c: 153: PR6 = periodVal;
 "153
-[e = _PR6 _periodVal ]
-[; ;tmr6.c: 154: }
+{
+[; ;tmr6.c: 152: void TMR6_Period8BitSet(uint8_t periodVal)
+[; ;tmr6.c: 153: {
+[e :U _TMR6_Period8BitSet ]
+"152
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"153
+[f ]
+[; ;tmr6.c: 154: PR6 = periodVal;
 "154
+[e = _PR6 _periodVal ]
+[; ;tmr6.c: 155: }
+"155
 [e :UE 1530 ]
 }
-"156
+"157
 [v _TMR6_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
-"157
-{
-[; ;tmr6.c: 156: void TMR6_LoadPeriodRegister(uint8_t periodVal)
-[; ;tmr6.c: 157: {
-[e :U _TMR6_LoadPeriodRegister ]
-"156
-[v _periodVal `uc ~T0 @X0 1 r1 ]
-"157
-[f ]
-[; ;tmr6.c: 158: TMR6_Period8BitSet(periodVal);
 "158
-[e ( _TMR6_Period8BitSet (1 _periodVal ]
-[; ;tmr6.c: 159: }
+{
+[; ;tmr6.c: 157: void TMR6_LoadPeriodRegister(uint8_t periodVal)
+[; ;tmr6.c: 158: {
+[e :U _TMR6_LoadPeriodRegister ]
+"157
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"158
+[f ]
+[; ;tmr6.c: 159: TMR6_Period8BitSet(periodVal);
 "159
+[e ( _TMR6_Period8BitSet (1 _periodVal ]
+[; ;tmr6.c: 160: }
+"160
 [e :UE 1531 ]
 }
-"161
-[v _TMR6_HasOverflowOccured `(uc ~T0 @X0 1 ef ]
 "162
+[v _TMR6_HasOverflowOccured `(uc ~T0 @X0 1 ef ]
+"163
 {
-[; ;tmr6.c: 161: bool TMR6_HasOverflowOccured(void)
-[; ;tmr6.c: 162: {
+[; ;tmr6.c: 162: bool TMR6_HasOverflowOccured(void)
+[; ;tmr6.c: 163: {
 [e :U _TMR6_HasOverflowOccured ]
 [f ]
-"164
-[v _status `uc ~T0 @X0 1 a ]
-[; ;tmr6.c: 164: bool status = PIR4bits.TMR6IF;
-[e = _status . . _PIR4bits 0 5 ]
-[; ;tmr6.c: 165: if(status)
 "165
-[e $ ! != -> _status `i -> -> -> 0 `i `uc `i 1533  ]
-[; ;tmr6.c: 166: {
+[v _status `uc ~T0 @X0 1 a ]
+[; ;tmr6.c: 165: bool status = PIR4bits.TMR6IF;
+[e = _status . . _PIR4bits 0 5 ]
+[; ;tmr6.c: 166: if(status)
 "166
+[e $ ! != -> _status `i -> -> -> 0 `i `uc `i 1533  ]
+[; ;tmr6.c: 167: {
+"167
 {
-[; ;tmr6.c: 168: PIR4bits.TMR6IF = 0;
-"168
-[e = . . _PIR4bits 0 5 -> -> 0 `i `uc ]
-[; ;tmr6.c: 169: T6TMR = 0x00;
+[; ;tmr6.c: 169: PIR4bits.TMR6IF = 0;
 "169
-[e = _T6TMR -> -> 0 `i `uc ]
+[e = . . _PIR4bits 0 5 -> -> 0 `i `uc ]
 "170
 }
 [e :U 1533 ]

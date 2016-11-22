@@ -16785,24 +16785,14 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 77 "mcc_generated_files/eusart.h"
-extern volatile uint8_t eusartTxBufferRemaining;
-extern volatile uint8_t eusartRxCount;
-
-# 106
+# 95 "mcc_generated_files/eusart.h"
 void EUSART_Initialize(void);
 
-# 155
+# 115
 uint8_t EUSART_Read(void);
 
-# 180
+# 135
 void EUSART_Write(uint8_t txData);
-
-# 201
-void EUSART_Transmit_ISR(void);
-
-# 222
-void EUSART_Receive_ISR(void);
 
 # 6 "/opt/microchip/xc8/v1.38/include/stddef.h"
 typedef int ptrdiff_t;

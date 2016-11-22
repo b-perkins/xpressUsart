@@ -47,26 +47,7 @@
   Section: Included Files
 */
 #include "eusart.h"
-
-/**
-  Section: Macro Declarations
-*/
-#define EUSART_TX_BUFFER_SIZE 8
-#define EUSART_RX_BUFFER_SIZE 8
-
-/**
-  Section: Global Variables
-*/
-
-static uint8_t eusartTxHead = 0;
-static uint8_t eusartTxTail = 0;
-static uint8_t eusartTxBuffer[EUSART_TX_BUFFER_SIZE];
-volatile uint8_t eusartTxBufferRemaining;
-
-static uint8_t eusartRxHead = 0;
-static uint8_t eusartRxTail = 0;
-static uint8_t eusartRxBuffer[EUSART_RX_BUFFER_SIZE];
-volatile uint8_t eusartRxCount;
+#include "mcc.h"    //  added to be able to toggle leds
 
 /**
   Section: EUSART APIs
@@ -74,10 +55,6 @@ volatile uint8_t eusartRxCount;
 
 void EUSART_Initialize(void)
 {
-    // disable interrupts before changing states
-    PIE3bits.RCIE = 0;
-    PIE3bits.TXIE = 0;
-
     // Set the EUSART module to the options selected in the user interface.
 
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
@@ -95,61 +72,35 @@ void EUSART_Initialize(void)
     // Baud Rate = 9600; SP1BRGH 3; 
     SP1BRGH = 0x03;
 
-
-    // initializing the driver state
-    eusartTxHead = 0;
-    eusartTxTail = 0;
-    eusartTxBufferRemaining = sizeof(eusartTxBuffer);
-
-    eusartRxHead = 0;
-    eusartRxTail = 0;
-    eusartRxCount = 0;
-
-    // enable receive interrupt
-    PIE3bits.RCIE = 1;
 }
+
 
 uint8_t EUSART_Read(void)
 {
-    uint8_t readValue  = 0;
+    LED2_Toggle();
+    while(!PIR3bits.RCIF)
+    {
+    }
+
     
-    while(0 == eusartRxCount)
+    if(1 == RC1STAbits.OERR)
     {
+        // EUSART error - restart
+
+        RC1STAbits.CREN = 0; 
+        RC1STAbits.CREN = 1; 
     }
 
-    readValue = eusartRxBuffer[eusartRxTail++];
-    if(sizeof(eusartRxBuffer) <= eusartRxTail)
-    {
-        eusartRxTail = 0;
-    }
-    PIE3bits.RCIE = 0;
-    eusartRxCount--;
-    PIE3bits.RCIE = 1;
-
-    return readValue;
+    return RC1REG;
 }
 
 void EUSART_Write(uint8_t txData)
 {
-    while(0 == eusartTxBufferRemaining)
+    while(0 == PIR3bits.TXIF)
     {
     }
 
-    if(0 == PIE3bits.TXIE)
-    {
-        TX1REG = txData;
-    }
-    else
-    {
-        PIE3bits.TXIE = 0;
-        eusartTxBuffer[eusartTxHead++] = txData;
-        if(sizeof(eusartTxBuffer) <= eusartTxHead)
-        {
-            eusartTxHead = 0;
-        }
-        eusartTxBufferRemaining--;
-    }
-    PIE3bits.TXIE = 1;
+    TX1REG = txData;    // Write the data byte to the USART.
 }
 
 char getch(void)
@@ -160,45 +111,6 @@ char getch(void)
 void putch(char txData)
 {
     EUSART_Write(txData);
-}
-
-void EUSART_Transmit_ISR(void)
-{
-
-    // add your EUSART interrupt custom code
-    if(sizeof(eusartTxBuffer) > eusartTxBufferRemaining)
-    {
-        TX1REG = eusartTxBuffer[eusartTxTail++];
-        if(sizeof(eusartTxBuffer) <= eusartTxTail)
-        {
-            eusartTxTail = 0;
-        }
-        eusartTxBufferRemaining++;
-    }
-    else
-    {
-        PIE3bits.TXIE = 0;
-    }
-}
-
-void EUSART_Receive_ISR(void)
-{
-
-    if(1 == RC1STAbits.OERR)
-    {
-        // EUSART error - restart
-
-        RC1STAbits.CREN = 0;
-        RC1STAbits.CREN = 1;
-    }
-
-    // buffer overruns are ignored
-    eusartRxBuffer[eusartRxHead++] = RC1REG;
-    if(sizeof(eusartRxBuffer) <= eusartRxHead)
-    {
-        eusartRxHead = 0;
-    }
-    eusartRxCount++;
 }
 /**
   End of File

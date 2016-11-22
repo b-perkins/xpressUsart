@@ -2407,7 +2407,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART" registerAlias="TXI" settingAlias="enable"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCONB" settingAlias="ODCB7"/>
@@ -2907,7 +2907,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="templateNameValue"/>
-         <value>eusart_interrupt</value>
+         <value>eusart_noninterrupt</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA0" alias="digital"/>
@@ -5735,7 +5735,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="eusartInterrupts"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="WPUC" settingAlias="WPUC3"/>
@@ -5919,7 +5919,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART" registerAlias="RCI" settingAlias="enable"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART" registerAlias="TXSTA" settingAlias="CSRC" alias="slave"/>
@@ -6009,7 +6009,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/eusart.c</file>
-         <hash>e95e80cc95eee23e544d26829294ec3e9b633cc696a89fd55f449925ef4ca13d</hash>
+         <hash>e9f1f60ab74d2b9b962a31d6856383a05afd557083c8692b21c92da8b4fc2be0</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr6.c</file>
@@ -6021,11 +6021,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files/eusart.h</file>
-         <hash>df0eeb4310744882214ef5e6ea75e04fc69f67b807104ce35f40595d489d615b</hash>
+         <hash>21ba6c4ce968fe52b64c4f2ab1b00a0ff3466f559114c15c87afbd51d3cce148</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/interrupt_manager.c</file>
-         <hash>4e2c8b999dea5b1bded85534d34eb7e74be8a8649223bfdfc6726cda4f819fc7</hash>
+         <hash>2997ff59144e1a59fb8d284ee15a95a618b3394bb157076557159b4799edd5ed</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.c</file>

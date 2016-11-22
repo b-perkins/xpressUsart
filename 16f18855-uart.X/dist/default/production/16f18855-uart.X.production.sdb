@@ -74,7 +74,7 @@ S_MASTER_SEND_ADDR_10BIT_LSB 10
 S_MASTER_10BIT_RESTART 11
 ]
 "10 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-[e E13640 . `uc
+[e E13634 . `uc
 I2C2_MESSAGE_COMPLETE 0
 I2C2_MESSAGE_FAIL 1
 I2C2_MESSAGE_PENDING 2
@@ -103,18 +103,14 @@ I2C2_LOST_STATE 6
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
 "22
 [v _main main `(v  1 e 1 0 ]
-"75 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+"56 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-"112
+"78
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
-"132
+"97
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-"160
+"111
 [v _putch putch `(v  1 e 1 0 ]
-"165
-[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
-"184
-[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
 "198 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
 [v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
 "233
@@ -145,32 +141,20 @@ I2C2_LOST_STATE 6
 [v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
 "115
 [v _TMR6_Stop TMR6_Stop `(v  1 e 1 0 ]
-"126
+"127
 [v _TMR6_Counter8BitGet TMR6_Counter8BitGet `(uc  1 e 1 0 ]
-"140
+"141
 [v _TMR6_Counter8BitSet TMR6_Counter8BitSet `(v  1 e 1 0 ]
-"151
+"152
 [v _TMR6_Period8BitSet TMR6_Period8BitSet `(v  1 e 1 0 ]
-[s S499 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S514 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "350 /opt/microchip/xc8/v1.38/include/pic16f18855.h
-[u S504 . 1 `S499 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES504  1 e 1 @11 ]
-[s S855 . 1 `uc 1 RA0 1 0 :1:0 
-`uc 1 RA1 1 0 :1:1 
-`uc 1 RA2 1 0 :1:2 
-`uc 1 RA3 1 0 :1:3 
-`uc 1 RA4 1 0 :1:4 
-`uc 1 RA5 1 0 :1:5 
-`uc 1 RA6 1 0 :1:6 
-`uc 1 RA7 1 0 :1:7 
-]
-"386
-[u S864 . 1 `S855 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES864  1 e 1 @12 ]
+[u S519 . 1 `S514 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES519  1 e 1 @11 ]
 "572
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "633
@@ -179,7 +163,7 @@ I2C2_LOST_STATE 6
 [v _TRISC TRISC `VEuc  1 e 1 @19 ]
 "755
 [v _LATA LATA `VEuc  1 e 1 @22 ]
-[s S878 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S24 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -189,8 +173,8 @@ I2C2_LOST_STATE 6
 `uc 1 LATA7 1 0 :1:7 
 ]
 "772
-[u S887 . 1 `S878 1 . 1 0 ]
-[v _LATAbits LATAbits `VES887  1 e 1 @22 ]
+[u S33 . 1 `S24 1 . 1 0 ]
+[v _LATAbits LATAbits `VES33  1 e 1 @22 ]
 "816
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "877
@@ -205,7 +189,7 @@ I2C2_LOST_STATE 6
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "3650
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S42 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S62 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -215,8 +199,8 @@ I2C2_LOST_STATE 6
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3676
-[u S51 . 1 `S42 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES51  1 e 1 @285 ]
+[u S71 . 1 `S62 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES71  1 e 1 @285 ]
 "3829
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
 "4008
@@ -229,21 +213,21 @@ I2C2_LOST_STATE 6
 [v _SSP2STAT SSP2STAT `VEuc  1 e 1 @409 ]
 "5004
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @410 ]
-[s S629 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S640 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5024
-[s S635 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S646 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S640 . 1 `S629 1 . 1 0 `S635 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES640  1 e 1 @410 ]
-[s S655 . 1 `uc 1 SEN 1 0 :1:0 
+[u S651 . 1 `S640 1 . 1 0 `S646 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES651  1 e 1 @410 ]
+[s S666 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -253,18 +237,18 @@ I2C2_LOST_STATE 6
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5102
-[s S664 . 1 `uc 1 . 1 0 :1:0 
+[s S675 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S667 . 1 `uc 1 . 1 0 :1:0 
+[s S678 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[u S674 . 1 `S655 1 . 1 0 `S664 1 . 1 0 `S667 1 . 1 0 ]
-[v _SSP2CON2bits SSP2CON2bits `VES674  1 e 1 @411 ]
+[u S685 . 1 `S666 1 . 1 0 `S675 1 . 1 0 `S678 1 . 1 0 ]
+[v _SSP2CON2bits SSP2CON2bits `VES685  1 e 1 @411 ]
 "5176
 [v _SSP2CON3 SSP2CON3 `VEuc  1 e 1 @412 ]
 "8756
@@ -277,16 +261,16 @@ I2C2_LOST_STATE 6
 [v _PR6 PR6 `VEuc  1 e 1 @665 ]
 "8830
 [v _T6CON T6CON `VEuc  1 e 1 @666 ]
-[s S255 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S269 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "8866
-[s S259 . 1 `uc 1 T6OUTPS 1 0 :4:0 
+[s S273 . 1 `uc 1 T6OUTPS 1 0 :4:0 
 `uc 1 T6CKPS 1 0 :3:4 
 `uc 1 T6ON 1 0 :1:7 
 ]
-[s S263 . 1 `uc 1 T6OUTPS0 1 0 :1:0 
+[s S277 . 1 `uc 1 T6OUTPS0 1 0 :1:0 
 `uc 1 T6OUTPS1 1 0 :1:1 
 `uc 1 T6OUTPS2 1 0 :1:2 
 `uc 1 T6OUTPS3 1 0 :1:3 
@@ -294,7 +278,7 @@ I2C2_LOST_STATE 6
 `uc 1 T6CKPS1 1 0 :1:5 
 `uc 1 T6CKPS2 1 0 :1:6 
 ]
-[s S271 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S285 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -303,59 +287,59 @@ I2C2_LOST_STATE 6
 `uc 1 CKPS2 1 0 :1:6 
 `uc 1 TMR6ON 1 0 :1:7 
 ]
-[u S280 . 1 `S255 1 . 1 0 `S259 1 . 1 0 `S263 1 . 1 0 `S271 1 . 1 0 ]
-[v _T6CONbits T6CONbits `VES280  1 e 1 @666 ]
+[u S294 . 1 `S269 1 . 1 0 `S273 1 . 1 0 `S277 1 . 1 0 `S285 1 . 1 0 ]
+[v _T6CONbits T6CONbits `VES294  1 e 1 @666 ]
 "8975
 [v _T6HLT T6HLT `VEuc  1 e 1 @667 ]
-[s S148 . 1 `uc 1 MODE 1 0 :5:0 
+[s S162 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "9008
-[s S153 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S167 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S159 . 1 `uc 1 T6MODE 1 0 :5:0 
+[s S173 . 1 `uc 1 T6MODE 1 0 :5:0 
 `uc 1 T6CKSYNC 1 0 :1:5 
 `uc 1 T6CKPOL 1 0 :1:6 
 `uc 1 T6PSYNC 1 0 :1:7 
 ]
-[s S164 . 1 `uc 1 T6MODE0 1 0 :1:0 
+[s S178 . 1 `uc 1 T6MODE0 1 0 :1:0 
 `uc 1 T6MODE1 1 0 :1:1 
 `uc 1 T6MODE2 1 0 :1:2 
 `uc 1 T6MODE3 1 0 :1:3 
 `uc 1 T6MODE4 1 0 :1:4 
 ]
-[u S170 . 1 `S148 1 . 1 0 `S153 1 . 1 0 `S159 1 . 1 0 `S164 1 . 1 0 ]
-[v _T6HLTbits T6HLTbits `VES170  1 e 1 @667 ]
+[u S184 . 1 `S162 1 . 1 0 `S167 1 . 1 0 `S173 1 . 1 0 `S178 1 . 1 0 ]
+[v _T6HLTbits T6HLTbits `VES184  1 e 1 @667 ]
 "9107
 [v _T6CLKCON T6CLKCON `VEuc  1 e 1 @668 ]
 "9259
 [v _T6RST T6RST `VEuc  1 e 1 @669 ]
-[s S217 . 1 `uc 1 RSEL 1 0 :5:0 
+[s S231 . 1 `uc 1 RSEL 1 0 :5:0 
 ]
 "9286
-[s S219 . 1 `uc 1 RSEL0 1 0 :1:0 
+[s S233 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
 `uc 1 RSEL3 1 0 :1:3 
 `uc 1 RSEL4 1 0 :1:4 
 ]
-[s S225 . 1 `uc 1 T6RSEL 1 0 :5:0 
+[s S239 . 1 `uc 1 T6RSEL 1 0 :5:0 
 ]
-[s S227 . 1 `uc 1 T6RSEL0 1 0 :1:0 
+[s S241 . 1 `uc 1 T6RSEL0 1 0 :1:0 
 `uc 1 T6RSEL1 1 0 :1:1 
 `uc 1 T6RSEL2 1 0 :1:2 
 `uc 1 T6RSEL3 1 0 :1:3 
 `uc 1 T6RSEL4 1 0 :1:4 
 ]
-[u S233 . 1 `S217 1 . 1 0 `S219 1 . 1 0 `S225 1 . 1 0 `S227 1 . 1 0 ]
-[v _T6RSTbits T6RSTbits `VES233  1 e 1 @669 ]
-[s S522 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S247 . 1 `S231 1 . 1 0 `S233 1 . 1 0 `S239 1 . 1 0 `S241 1 . 1 0 ]
+[v _T6RSTbits T6RSTbits `VES247  1 e 1 @669 ]
+[s S45 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -363,9 +347,9 @@ I2C2_LOST_STATE 6
 `uc 1 RCIF 1 0 :1:5 
 ]
 "19508
-[u S529 . 1 `S522 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES529  1 e 1 @1807 ]
-[s S105 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S52 . 1 `S45 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES52  1 e 1 @1807 ]
+[s S123 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -373,9 +357,9 @@ I2C2_LOST_STATE 6
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "19557
-[u S112 . 1 `S105 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES112  1 e 1 @1808 ]
-[s S19 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S130 . 1 `S123 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES130  1 e 1 @1808 ]
+[s S527 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -383,8 +367,8 @@ I2C2_LOST_STATE 6
 `uc 1 RCIE 1 0 :1:5 
 ]
 "19921
-[u S26 . 1 `S19 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES26  1 e 1 @1817 ]
+[u S534 . 1 `S527 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES534  1 e 1 @1817 ]
 "21546
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
 "21684
@@ -397,55 +381,55 @@ I2C2_LOST_STATE 6
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
 "27917
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
-[s S400 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+[s S415 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
 ]
 "27927
-[u S402 . 1 `S400 1 . 1 0 ]
-[v _PPSLOCKbits PPSLOCKbits `VES402  1 e 1 @3727 ]
-[s S407 . 1 `uc 1 T6AINPPS 1 0 :5:0 
+[u S417 . 1 `S415 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES417  1 e 1 @3727 ]
+[s S422 . 1 `uc 1 T6AINPPS 1 0 :5:0 
 ]
 "28451
-[s S409 . 1 `uc 1 T6AINPPS0 1 0 :1:0 
+[s S424 . 1 `uc 1 T6AINPPS0 1 0 :1:0 
 `uc 1 T6AINPPS1 1 0 :1:1 
 `uc 1 T6AINPPS2 1 0 :1:2 
 `uc 1 T6AINPPS3 1 0 :1:3 
 `uc 1 T6AINPPS4 1 0 :1:4 
 ]
-[u S415 . 1 `S407 1 . 1 0 `S409 1 . 1 0 ]
-[v _T6AINPPSbits T6AINPPSbits `VES415  1 e 1 @3742 ]
-[s S471 . 1 `uc 1 SSP2CLKPPS0 1 0 :1:0 
+[u S430 . 1 `S422 1 . 1 0 `S424 1 . 1 0 ]
+[v _T6AINPPSbits T6AINPPSbits `VES430  1 e 1 @3742 ]
+[s S486 . 1 `uc 1 SSP2CLKPPS0 1 0 :1:0 
 `uc 1 SSP2CLKPPS1 1 0 :1:1 
 `uc 1 SSP2CLKPPS2 1 0 :1:2 
 `uc 1 SSP2CLKPPS3 1 0 :1:3 
 `uc 1 SSP2CLKPPS4 1 0 :1:4 
 ]
 "29673
-[s S477 . 1 `uc 1 SSP2CLKPPS 1 0 :5:0 
+[s S492 . 1 `uc 1 SSP2CLKPPS 1 0 :5:0 
 ]
-[u S479 . 1 `S471 1 . 1 0 `S477 1 . 1 0 ]
-[v _SSP2CLKPPSbits SSP2CLKPPSbits `VES479  1 e 1 @3784 ]
-[s S451 . 1 `uc 1 SSP2DATPPS0 1 0 :1:0 
+[u S494 . 1 `S486 1 . 1 0 `S492 1 . 1 0 ]
+[v _SSP2CLKPPSbits SSP2CLKPPSbits `VES494  1 e 1 @3784 ]
+[s S466 . 1 `uc 1 SSP2DATPPS0 1 0 :1:0 
 `uc 1 SSP2DATPPS1 1 0 :1:1 
 `uc 1 SSP2DATPPS2 1 0 :1:2 
 `uc 1 SSP2DATPPS3 1 0 :1:3 
 `uc 1 SSP2DATPPS4 1 0 :1:4 
 ]
 "29724
-[s S457 . 1 `uc 1 SSP2DATPPS 1 0 :5:0 
+[s S472 . 1 `uc 1 SSP2DATPPS 1 0 :5:0 
 ]
-[u S459 . 1 `S451 1 . 1 0 `S457 1 . 1 0 ]
-[v _SSP2DATPPSbits SSP2DATPPSbits `VES459  1 e 1 @3785 ]
-[s S428 . 1 `uc 1 RXPPS0 1 0 :1:0 
+[u S474 . 1 `S466 1 . 1 0 `S472 1 . 1 0 ]
+[v _SSP2DATPPSbits SSP2DATPPSbits `VES474  1 e 1 @3785 ]
+[s S443 . 1 `uc 1 RXPPS0 1 0 :1:0 
 `uc 1 RXPPS1 1 0 :1:1 
 `uc 1 RXPPS2 1 0 :1:2 
 `uc 1 RXPPS3 1 0 :1:3 
 `uc 1 RXPPS4 1 0 :1:4 
 ]
 "29826
-[s S434 . 1 `uc 1 RXPPS 1 0 :5:0 
+[s S449 . 1 `uc 1 RXPPS 1 0 :5:0 
 ]
-[u S436 . 1 `S428 1 . 1 0 `S434 1 . 1 0 ]
-[v _RXPPSbits RXPPSbits `VES436  1 e 1 @3787 ]
+[u S451 . 1 `S443 1 . 1 0 `S449 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES451  1 e 1 @3787 ]
 "30695
 [v _RC0PPS RC0PPS `VEuc  1 e 1 @3872 ]
 "30842
@@ -479,42 +463,26 @@ I2C2_LOST_STATE 6
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "354 /opt/microchip/xc8/v1.38/sources/common/doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
-"61 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-[v _eusartTxHead eusartTxHead `uc  1 s 1 eusartTxHead ]
-"62
-[v _eusartTxTail eusartTxTail `uc  1 s 1 eusartTxTail ]
-"63
-[v _eusartTxBuffer eusartTxBuffer `[8]uc  1 s 8 eusartTxBuffer ]
-"64
-[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 e 1 0 ]
-"66
-[v _eusartRxHead eusartRxHead `uc  1 s 1 eusartRxHead ]
-"67
-[v _eusartRxTail eusartRxTail `uc  1 s 1 eusartRxTail ]
-"68
-[v _eusartRxBuffer eusartRxBuffer `[8]uc  1 s 8 eusartRxBuffer ]
-"69
-[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
-[s S563 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+[s S574 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
 "184 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-[s S575 . 3 `uc 1 count 1 0 `*.4S563 1 ptrb_list 1 1 `*.4E13560 1 pTrFlag 1 2 ]
-[v _i2c2_tr_queue i2c2_tr_queue `[1]S575  1 s 3 i2c2_tr_queue ]
+[s S586 . 3 `uc 1 count 1 0 `*.4S574 1 ptrb_list 1 1 `*.4E13560 1 pTrFlag 1 2 ]
+[v _i2c2_tr_queue i2c2_tr_queue `[1]S586  1 s 3 i2c2_tr_queue ]
 "185
-[s S579 . 1 `uc 1 full 1 0 :1:0 
+[s S590 . 1 `uc 1 full 1 0 :1:0 
 `uc 1 empty 1 0 :1:1 
 `uc 1 reserved 1 0 :6:2 
 ]
-[u S583 . 1 `S579 1 s 1 0 `uc 1 status 1 0 ]
-[s S586 . 5 `*.4S575 1 pTrTail 1 0 `*.4S575 1 pTrHead 1 1 `S583 1 trStatus 1 2 `uc 1 i2cDoneFlag 1 3 `uc 1 i2cErrors 1 4 ]
-[v _i2c2_object i2c2_object `S586  1 s 5 i2c2_object ]
+[u S594 . 1 `S590 1 s 1 0 `uc 1 status 1 0 ]
+[s S597 . 5 `*.4S586 1 pTrTail 1 0 `*.4S586 1 pTrHead 1 1 `S594 1 trStatus 1 2 `uc 1 i2cDoneFlag 1 3 `uc 1 i2cErrors 1 4 ]
+[v _i2c2_object i2c2_object `S597  1 s 5 i2c2_object ]
 "186
 [v _i2c2_state i2c2_state `E13628  1 s 1 i2c2_state ]
 "187
 [v _i2c2_trb_count i2c2_trb_count `uc  1 s 1 i2c2_trb_count ]
 "189
-[v _p_i2c2_trb_current p_i2c2_trb_current `*.4S563  1 s 1 p_i2c2_trb_current ]
+[v _p_i2c2_trb_current p_i2c2_trb_current `*.4S574  1 s 1 p_i2c2_trb_current ]
 "190
-[v _p_i2c2_current p_i2c2_current `*.4S575  1 s 1 p_i2c2_current ]
+[v _p_i2c2_current p_i2c2_current `*.4S586  1 s 1 p_i2c2_current ]
 "22 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -522,7 +490,7 @@ I2C2_LOST_STATE 6
 [v main@templo templo `uc  1 a 1 33 ]
 "25
 [v main@temp temp `c  1 a 1 32 ]
-"49
+"50
 } 0
 "464 /opt/microchip/xc8/v1.38/sources/common/doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -541,22 +509,22 @@ I2C2_LOST_STATE 6
 [v printf@f f `*.25DCCuc  1 p 2 14 ]
 "1541
 } 0
-"160 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+"111 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
 [v putch@txData txData `uc  1 a 1 wreg ]
-"162
-[v putch@txData txData `uc  1 a 1 2 ]
-"163
+"113
+[v putch@txData txData `uc  1 a 1 1 ]
+"114
 } 0
-"132
+"97
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
 {
 [v EUSART_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 1 ]
-"153
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"104
 } 0
 "6 /opt/microchip/xc8/v1.38/sources/common/lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
@@ -590,6 +558,16 @@ I2C2_LOST_STATE 6
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
+"115 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+[v _TMR6_Stop TMR6_Stop `(v  1 e 1 0 ]
+{
+"120
+} 0
+"104
+[v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
+{
+"108
+} 0
 "82 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
@@ -599,11 +577,6 @@ I2C2_LOST_STATE 6
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 {
 "90
-} 0
-"104
-[v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
-{
-"108
 } 0
 "51 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -622,23 +595,28 @@ I2C2_LOST_STATE 6
 {
 "222
 } 0
-"75 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+"56 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
-"110
+"75
+} 0
+"78
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"95
 } 0
 "8 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
 [v _EMC1001_Read EMC1001_Read `(uc  1 e 1 0 ]
 {
 [v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
 "10
-[v EMC1001_Read@status status `E13640  1 a 1 11 ]
+[v EMC1001_Read@status status `E13634  1 a 1 11 ]
 "8
 [v EMC1001_Read@reg reg `uc  1 a 1 wreg ]
 [v EMC1001_Read@pData pData `*.4uc  1 p 1 7 ]
-[s S563 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+[s S574 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
 "11
-[v EMC1001_Read@trb trb `[2]S563  1 s 8 trb ]
+[v EMC1001_Read@trb trb `[2]S574  1 s 8 trb ]
 "10
 [v EMC1001_Read@reg reg `uc  1 a 1 10 ]
 "20
@@ -646,10 +624,10 @@ I2C2_LOST_STATE 6
 "707 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
 [v _I2C2_MasterWriteTRBBuild I2C2_MasterWriteTRBBuild `(v  1 e 1 0 ]
 {
-[s S563 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+[s S574 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
 "708
-[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S563  1 a 1 wreg ]
-[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S563  1 a 1 wreg ]
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S574  1 a 1 wreg ]
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S574  1 a 1 wreg ]
 "709
 [v I2C2_MasterWriteTRBBuild@pdata pdata `*.4uc  1 p 1 0 ]
 "710
@@ -658,7 +636,7 @@ I2C2_LOST_STATE 6
 [v I2C2_MasterWriteTRBBuild@address address `ui  1 p 2 2 ]
 "713
 "708
-[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S563  1 a 1 6 ]
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.4S574  1 a 1 6 ]
 "716
 } 0
 "641
@@ -667,9 +645,9 @@ I2C2_LOST_STATE 6
 "642
 [v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
 [v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
-[s S563 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+[s S574 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
 "643
-[v I2C2_MasterTRBInsert@ptrb_list ptrb_list `*.4S563  1 p 1 0 ]
+[v I2C2_MasterTRBInsert@ptrb_list ptrb_list `*.4S574  1 p 1 0 ]
 "644
 [v I2C2_MasterTRBInsert@pflag pflag `*.4E13560  1 p 1 1 ]
 "648
@@ -679,10 +657,10 @@ I2C2_LOST_STATE 6
 "694
 [v _I2C2_MasterReadTRBBuild I2C2_MasterReadTRBBuild `(v  1 e 1 0 ]
 {
-[s S563 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
+[s S574 . 4 `ui 1 address 2 0 `uc 1 length 1 2 `*.4uc 1 pbuffer 1 3 ]
 "695
-[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S563  1 a 1 wreg ]
-[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S563  1 a 1 wreg ]
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S574  1 a 1 wreg ]
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S574  1 a 1 wreg ]
 "696
 [v I2C2_MasterReadTRBBuild@pdata pdata `*.4uc  1 p 1 0 ]
 "697
@@ -691,13 +669,13 @@ I2C2_LOST_STATE 6
 [v I2C2_MasterReadTRBBuild@address address `ui  1 p 2 2 ]
 "700
 "695
-[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S563  1 a 1 6 ]
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.4S574  1 a 1 6 ]
 "705
 } 0
 "51 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"74
+"66
 } 0
 "233 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
 [v _I2C2_ISR I2C2_ISR `(v  1 e 1 0 ]
@@ -730,14 +708,4 @@ I2C2_LOST_STATE 6
 [v _I2C2_BusCollisionISR I2C2_BusCollisionISR `(v  1 e 1 0 ]
 {
 "731
-} 0
-"165 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
-{
-"182
-} 0
-"184
-[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
-{
-"202
 } 0

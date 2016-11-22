@@ -7,7 +7,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _I2C2_Initialize `(v ~T0 @X0 0 ef ]
 "335 mcc_generated_files/tmr6.h
 [v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
-"106 mcc_generated_files/eusart.h
+"95 mcc_generated_files/eusart.h
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
 "21546 /opt/microchip/xc8/v1.38/include/pic16f18855.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@2189 ]
@@ -12671,13 +12671,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;eusart.h: 77: extern volatile uint8_t eusartTxBufferRemaining;
-[; ;eusart.h: 78: extern volatile uint8_t eusartRxCount;
-[; ;eusart.h: 106: void EUSART_Initialize(void);
-[; ;eusart.h: 155: uint8_t EUSART_Read(void);
-[; ;eusart.h: 180: void EUSART_Write(uint8_t txData);
-[; ;eusart.h: 201: void EUSART_Transmit_ISR(void);
-[; ;eusart.h: 222: void EUSART_Receive_ISR(void);
+[; ;eusart.h: 95: void EUSART_Initialize(void);
+[; ;eusart.h: 115: uint8_t EUSART_Read(void);
+[; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;i2c2.h: 83: typedef enum
 [; ;i2c2.h: 84: {

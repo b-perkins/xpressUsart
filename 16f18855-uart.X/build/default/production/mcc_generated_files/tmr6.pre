@@ -16881,7 +16881,7 @@ T6TMR = 0x00;
 PIR4bits.TMR6IF = 0;
 
 
-TMR6_Start();
+
 }
 
 void TMR6_ModeSet(TMR6_HLT_MODE mode)
@@ -16911,6 +16911,7 @@ void TMR6_Stop(void)
 {
 
 T6CONbits.TMR6ON = 0;
+T6TMR = 0x00;
 }
 
 void TMR6_StopTimer(void)
@@ -16961,7 +16962,6 @@ if(status)
 {
 
 PIR4bits.TMR6IF = 0;
-T6TMR = 0x00;
 }
 return status;
 }

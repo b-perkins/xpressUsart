@@ -51,15 +51,7 @@
 void interrupt INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCONbits.PEIE == 1 && PIE3bits.TXIE == 1 && PIR3bits.TXIF == 1)
-    {
-        EUSART_Transmit_ISR();
-    }
-    else if(INTCONbits.PEIE == 1 && PIE3bits.RCIE == 1 && PIR3bits.RCIF == 1)
-    {
-        EUSART_Receive_ISR();
-    }
-    else if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
+    if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
     {
         I2C2_BusCollisionISR();
     }

@@ -86,7 +86,7 @@ void TMR6_Initialize(void)
     PIR4bits.TMR6IF = 0;
 
     // Start TMR6
-    TMR6_Start();
+    //TMR6_Start(); //  dont start the timer until char is received
 }
 
 void TMR6_ModeSet(TMR6_HLT_MODE mode)
@@ -116,6 +116,7 @@ void TMR6_Stop(void)
 {
     // Stop the Timer by writing to TMRxON bit
     T6CONbits.TMR6ON = 0;
+    T6TMR = 0x00;   //  Stop the timer when it overflows
 }
 
 void TMR6_StopTimer(void)
@@ -166,7 +167,6 @@ bool TMR6_HasOverflowOccured(void)
     {
         // Clearing IF flag.
         PIR4bits.TMR6IF = 0;
-        T6TMR = 0x00;   //  Stop the timer when it overflows
     }
     return status;
 }

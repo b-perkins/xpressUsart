@@ -23,10 +23,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S917 . . ]
 "19508
 [v _PIR3bits `VS917 ~T0 @X0 0 e@1807 ]
-"201 mcc_generated_files/eusart.h
-[v _EUSART_Transmit_ISR `(v ~T0 @X0 0 ef ]
-"222
-[v _EUSART_Receive_ISR `(v ~T0 @X0 0 ef ]
 "686 mcc_generated_files/i2c2.h
 [v _I2C2_BusCollisionISR `(v ~T0 @X0 0 ef ]
 "687
@@ -12639,13 +12635,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;eusart.h: 77: extern volatile uint8_t eusartTxBufferRemaining;
-[; ;eusart.h: 78: extern volatile uint8_t eusartRxCount;
-[; ;eusart.h: 106: void EUSART_Initialize(void);
-[; ;eusart.h: 155: uint8_t EUSART_Read(void);
-[; ;eusart.h: 180: void EUSART_Write(uint8_t txData);
-[; ;eusart.h: 201: void EUSART_Transmit_ISR(void);
-[; ;eusart.h: 222: void EUSART_Receive_ISR(void);
+[; ;eusart.h: 95: void EUSART_Initialize(void);
+[; ;eusart.h: 115: uint8_t EUSART_Read(void);
+[; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;i2c2.h: 83: typedef enum
 [; ;i2c2.h: 84: {
@@ -12762,75 +12754,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 52: {
 [e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;interrupt_manager.c: 54: if(INTCONbits.PEIE == 1 && PIE3bits.TXIE == 1 && PIR3bits.TXIF == 1)
+[; ;interrupt_manager.c: 54: if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
 "54
-[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 4 `i -> 1 `i == -> . . _PIR3bits 0 4 `i -> 1 `i 1522  ]
+[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1522  ]
 [; ;interrupt_manager.c: 55: {
 "55
 {
-[; ;interrupt_manager.c: 56: EUSART_Transmit_ISR();
+[; ;interrupt_manager.c: 56: I2C2_BusCollisionISR();
 "56
-[e ( _EUSART_Transmit_ISR ..  ]
+[e ( _I2C2_BusCollisionISR ..  ]
 "57
 }
 [; ;interrupt_manager.c: 57: }
 [e $U 1523  ]
 "58
 [e :U 1522 ]
-[; ;interrupt_manager.c: 58: else if(INTCONbits.PEIE == 1 && PIE3bits.RCIE == 1 && PIR3bits.RCIF == 1)
-[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 5 `i -> 1 `i == -> . . _PIR3bits 0 5 `i -> 1 `i 1524  ]
+[; ;interrupt_manager.c: 58: else if(INTCONbits.PEIE == 1 && PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
+[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1524  ]
 [; ;interrupt_manager.c: 59: {
 "59
 {
-[; ;interrupt_manager.c: 60: EUSART_Receive_ISR();
+[; ;interrupt_manager.c: 60: I2C2_ISR();
 "60
-[e ( _EUSART_Receive_ISR ..  ]
+[e ( _I2C2_ISR ..  ]
 "61
 }
 [; ;interrupt_manager.c: 61: }
 [e $U 1525  ]
 "62
 [e :U 1524 ]
-[; ;interrupt_manager.c: 62: else if(INTCONbits.PEIE == 1 && PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
-[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1526  ]
+[; ;interrupt_manager.c: 62: else
 [; ;interrupt_manager.c: 63: {
 "63
 {
-[; ;interrupt_manager.c: 64: I2C2_BusCollisionISR();
-"64
-[e ( _I2C2_BusCollisionISR ..  ]
 "65
 }
-[; ;interrupt_manager.c: 65: }
-[e $U 1527  ]
-"66
-[e :U 1526 ]
-[; ;interrupt_manager.c: 66: else if(INTCONbits.PEIE == 1 && PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
-[e $ ! && && == -> . . _INTCONbits 0 2 `i -> 1 `i == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1528  ]
-[; ;interrupt_manager.c: 67: {
-"67
-{
-[; ;interrupt_manager.c: 68: I2C2_ISR();
-"68
-[e ( _I2C2_ISR ..  ]
-"69
-}
-[; ;interrupt_manager.c: 69: }
-[e $U 1529  ]
-"70
-[e :U 1528 ]
-[; ;interrupt_manager.c: 70: else
-[; ;interrupt_manager.c: 71: {
-"71
-{
-"73
-}
-[e :U 1529 ]
-[e :U 1527 ]
 [e :U 1525 ]
 [e :U 1523 ]
-[; ;interrupt_manager.c: 73: }
-[; ;interrupt_manager.c: 74: }
-"74
+[; ;interrupt_manager.c: 65: }
+[; ;interrupt_manager.c: 66: }
+"66
 [e :UE 1521 ]
 }
