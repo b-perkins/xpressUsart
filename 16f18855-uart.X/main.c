@@ -21,7 +21,6 @@ uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 
 void main(void)
 {
-    bool toggle = true;
     uint8_t data;
     int8_t  temp;
     uint8_t templo;
@@ -36,14 +35,13 @@ void main(void)
             LED1_Toggle();
             printf("\n");
             EUSART_Write(carriageReturn);
-            toggle = false;
 
             if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) 
             {
                 EMC1001_Read(TEMP_LO, &templo);     // get lsb 
                 templo = templo >> 6;                   
                 if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
-                printf(" The temperature is: %d.%d C", temp, templo*25);
+                printf("%d.%d", temp, templo*25);
             }
         }
     }
