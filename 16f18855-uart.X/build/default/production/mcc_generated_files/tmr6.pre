@@ -16860,7 +16860,7 @@ void TMR6_Initialize(void)
 
 
 
-T6CON = 0x70;
+T6CON = 0x79;
 
 
 T6CLKCON = 0x04;
@@ -16872,7 +16872,7 @@ T6HLT = 0x00;
 T6RST = 0x00;
 
 
-T6PR = 0xFD;
+T6PR = 0xF1;
 
 
 T6TMR = 0x00;
