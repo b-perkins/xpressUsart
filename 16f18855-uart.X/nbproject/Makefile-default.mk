@@ -77,11 +77,28 @@ LDLIBSOPTIONS=
 # fixDeps replaces a bunch of sed/cat/printf statements that slow down the build
 FIXDEPS=fixDeps
 
+# The following macros may be used in the pre and post step lines
+Device=PIC16F18855
+ProjectDir=/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X
+ConfName=default
+ImagePath=dist/default/${IMAGE_TYPE}/16f18855-uart.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+ImageDir=dist/default/${IMAGE_TYPE}
+ImageName=16f18855-uart.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+IsDebug="true"
+else
+IsDebug="false"
+endif
+
 .build-conf:  ${BUILD_SUBPROJECTS}
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/16f18855-uart.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	@echo "--------------------------------------"
+	@echo "User defined post-build step: [cp ${ProjectDir}/${ImageDir}/${ImageName} /media/devsys/XPRESS]"
+	@cp ${ProjectDir}/${ImageDir}/${ImageName} /media/devsys/XPRESS
+	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=16F18855
 # ------------------------------------------------------------------------------------

@@ -59,6 +59,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set LED1 aliases
+#define LED1_TRIS               TRISAbits.TRISA0
+#define LED1_LAT                LATAbits.LATA0
+#define LED1_PORT               PORTAbits.RA0
+#define LED1_WPU                WPUAbits.WPUA0
+#define LED1_OD                ODCONAbits.ODCA0
+#define LED1_ANS                ANSELAbits.ANSA0
+#define LED1_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define LED1_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define LED1_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define LED1_GetValue()           PORTAbits.RA0
+#define LED1_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define LED1_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define LED1_SetPullup()      do { WPUAbits.WPUA0 = 1; } while(0)
+#define LED1_ResetPullup()    do { WPUAbits.WPUA0 = 0; } while(0)
+#define LED1_SetPushPull()    do { ODCONAbits.ODCA0 = 1; } while(0)
+#define LED1_SetOpenDrain()   do { ODCONAbits.ODCA0 = 0; } while(0)
+#define LED1_SetAnalogMode()  do { ANSELAbits.ANSA0 = 1; } while(0)
+#define LED1_SetDigitalMode() do { ANSELAbits.ANSA0 = 0; } while(0)
+
 // get/set RB7 procedures
 #define RB7_SetHigh()    do { LATBbits.LATB7 = 1; } while(0)
 #define RB7_SetLow()   do { LATBbits.LATB7 = 0; } while(0)

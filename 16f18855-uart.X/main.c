@@ -12,6 +12,7 @@ void main(void)
     {
         if (TMR6_HasOverflowOccured())
         {
+            LED1_Toggle();
             if (toggle)
             {
                 EUSART_Write(0x41); //A

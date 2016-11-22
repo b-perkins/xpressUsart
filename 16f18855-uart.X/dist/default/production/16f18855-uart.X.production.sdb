@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 16F18855 ]
 [d frameptr 6 ]
-"93 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
-[e E13193 . `uc
+"93 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+[e E13558 . `uc
 TMR6_ROP_STARTS_TMRON 0
 TMR6_ROP_STARTS_TMRON_ERSHIGH 1
 TMR6_ROP_STARTS_TMRON_ERSLOW 2
@@ -28,7 +28,7 @@ TMR6_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
 TMR6_MS_STARTS_TMRON_ERSBOTHEDGE 19
 ]
 "99
-[e E13216 . `uc
+[e E13581 . `uc
 TMR6_T6INPPS 0
 TMR6_T2POSTSCALED 1
 TMR6_T4POSTSCALED 2
@@ -48,29 +48,29 @@ TMR6_LC2_OUT 15
 TMR6_LC3_OUT 16
 TMR6_LC4_OUT 17
 ]
-"62 /opt/microchip/xc8/v1.37/sources/common/float.c
+"62 /opt/microchip/xc8/v1.38/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 /opt/microchip/xc8/v1.37/sources/common/ftadd.c
+"86 /opt/microchip/xc8/v1.38/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.37/sources/pic/eeprom.c
+"6 /opt/microchip/xc8/v1.38/sources/pic/eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"5 /home/mittens/code/16f18855-uart.X/main.c
+"5 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"55 /home/mittens/code/16f18855-uart.X/mcc_generated_files/eusart.c
+"55 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "77
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
 "97
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-"82 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+"82 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "91
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"51 /home/mittens/code/16f18855-uart.X/mcc_generated_files/pin_manager.c
+"51 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"63 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+"63 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "104
 [v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
@@ -84,7 +84,7 @@ TMR6_LC4_OUT 17
 [v _TMR6_Period8BitSet TMR6_Period8BitSet `(v  1 e 1 0 ]
 "161
 [v _TMR6_HasOverflowOccured TMR6_HasOverflowOccured `(uc  1 e 1 0 ]
-"572 /opt/microchip/xc8/v1.37/include/pic16f18855.h
+"572 /opt/microchip/xc8/v1.38/include/pic16f18855.h
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "633
 [v _TRISB TRISB `VEuc  1 e 1 @18 ]
@@ -92,6 +92,18 @@ TMR6_LC4_OUT 17
 [v _TRISC TRISC `VEuc  1 e 1 @19 ]
 "755
 [v _LATA LATA `VEuc  1 e 1 @22 ]
+[s S421 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"772
+[u S430 . 1 `S421 1 . 1 0 ]
+[v _LATAbits LATAbits `VES430  1 e 1 @22 ]
 "816
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "877
@@ -122,21 +134,21 @@ TMR6_LC4_OUT 17
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
 "4008
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
-"8532
+"8756
 [v _T6TMR T6TMR `VEuc  1 e 1 @664 ]
-"8537
+"8761
 [v _TMR6 TMR6 `VEuc  1 e 1 @664 ]
-"8569
+"8793
 [v _T6PR T6PR `VEuc  1 e 1 @665 ]
-"8574
+"8798
 [v _PR6 PR6 `VEuc  1 e 1 @665 ]
-"8606
+"8830
 [v _T6CON T6CON `VEuc  1 e 1 @666 ]
 [s S244 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
-"8642
+"8866
 [s S248 . 1 `uc 1 T6OUTPS 1 0 :4:0 
 `uc 1 T6CKPS 1 0 :3:4 
 `uc 1 T6ON 1 0 :1:7 
@@ -160,14 +172,14 @@ TMR6_LC4_OUT 17
 ]
 [u S269 . 1 `S244 1 . 1 0 `S248 1 . 1 0 `S252 1 . 1 0 `S260 1 . 1 0 ]
 [v _T6CONbits T6CONbits `VES269  1 e 1 @666 ]
-"8751
+"8975
 [v _T6HLT T6HLT `VEuc  1 e 1 @667 ]
 [s S137 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
-"8784
+"9008
 [s S142 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
@@ -187,13 +199,13 @@ TMR6_LC4_OUT 17
 ]
 [u S159 . 1 `S137 1 . 1 0 `S142 1 . 1 0 `S148 1 . 1 0 `S153 1 . 1 0 ]
 [v _T6HLTbits T6HLTbits `VES159  1 e 1 @667 ]
-"8878
+"9107
 [v _T6CLKCON T6CLKCON `VEuc  1 e 1 @668 ]
-"8923
+"9259
 [v _T6RST T6RST `VEuc  1 e 1 @669 ]
 [s S206 . 1 `uc 1 RSEL 1 0 :5:0 
 ]
-"8950
+"9286
 [s S208 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
@@ -217,7 +229,7 @@ TMR6_LC4_OUT 17
 `uc 1 TXIF 1 0 :1:4 
 `uc 1 RCIF 1 0 :1:5 
 ]
-"18224
+"19508
 [u S52 . 1 `S45 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES52  1 e 1 @1807 ]
 [s S94 . 1 `uc 1 TMR1IF 1 0 :1:0 
@@ -227,29 +239,29 @@ TMR6_LC4_OUT 17
 `uc 1 TMR5IF 1 0 :1:4 
 `uc 1 TMR6IF 1 0 :1:5 
 ]
-"18273
+"19557
 [u S101 . 1 `S94 1 . 1 0 ]
 [v _PIR4bits PIR4bits `VES101  1 e 1 @1808 ]
-"20262
+"21546
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
-"20400
+"21684
 [v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
-"20495
+"21779
 [v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
-"20545
+"21829
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
-"20602
+"21886
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
-"26633
+"27917
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
 [s S385 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
 ]
-"26643
+"27927
 [u S387 . 1 `S385 1 . 1 0 ]
 [v _PPSLOCKbits PPSLOCKbits `VES387  1 e 1 @3727 ]
 [s S392 . 1 `uc 1 T6AINPPS 1 0 :5:0 
 ]
-"27167
+"28451
 [s S394 . 1 `uc 1 T6AINPPS0 1 0 :1:0 
 `uc 1 T6AINPPS1 1 0 :1:1 
 `uc 1 T6AINPPS2 1 0 :1:2 
@@ -258,53 +270,53 @@ TMR6_LC4_OUT 17
 ]
 [u S400 . 1 `S392 1 . 1 0 `S394 1 . 1 0 ]
 [v _T6AINPPSbits T6AINPPSbits `VES400  1 e 1 @3742 ]
-"29411
+"30695
 [v _RC0PPS RC0PPS `VEuc  1 e 1 @3872 ]
-"29705
+"30989
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @3878 ]
-"29803
+"31087
 [v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
-"29864
+"31148
 [v _WPUA WPUA `VEuc  1 e 1 @3897 ]
-"29925
+"31209
 [v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
-"30413
+"31697
 [v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
-"30474
+"31758
 [v _WPUB WPUB `VEuc  1 e 1 @3908 ]
-"30535
+"31819
 [v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
-"31023
+"32307
 [v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
-"31084
+"32368
 [v _WPUC WPUC `VEuc  1 e 1 @3919 ]
-"31145
+"32429
 [v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
-"31633
+"32917
 [v _WPUE WPUE `VEuc  1 e 1 @3941 ]
-"33410
-"33410
+"34694
+"34694
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"4 /home/mittens/code/16f18855-uart.X/main.c
+"4 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
 [v _toggle toggle `uc  1 e 1 0 ]
 "5
 [v _main main `(v  1 e 1 0 ]
 {
-"32
+"33
 } 0
-"161 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+"161 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
 [v _TMR6_HasOverflowOccured TMR6_HasOverflowOccured `(uc  1 e 1 0 ]
 {
 "164
 [v TMR6_HasOverflowOccured@status status `uc  1 a 1 0 ]
 "171
 } 0
-"82 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+"82 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "89
 } 0
-"63 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+"63 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 {
 "90
@@ -314,19 +326,19 @@ TMR6_LC4_OUT 17
 {
 "108
 } 0
-"51 /home/mittens/code/16f18855-uart.X/mcc_generated_files/pin_manager.c
+"51 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "94
 [v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
 "109
 } 0
-"91 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+"91 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "105
 } 0
-"55 /home/mittens/code/16f18855-uart.X/mcc_generated_files/eusart.c
+"55 /home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "74
