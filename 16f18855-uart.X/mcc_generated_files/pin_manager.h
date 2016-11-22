@@ -99,6 +99,26 @@
 #define LED2_SetAnalogMode()  do { ANSELAbits.ANSA1 = 1; } while(0)
 #define LED2_SetDigitalMode() do { ANSELAbits.ANSA1 = 0; } while(0)
 
+// get/set BTN2 aliases
+#define BTN2_TRIS               TRISAbits.TRISA5
+#define BTN2_LAT                LATAbits.LATA5
+#define BTN2_PORT               PORTAbits.RA5
+#define BTN2_WPU                WPUAbits.WPUA5
+#define BTN2_OD                ODCONAbits.ODCA5
+#define BTN2_ANS                ANSELAbits.ANSA5
+#define BTN2_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define BTN2_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define BTN2_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define BTN2_GetValue()           PORTAbits.RA5
+#define BTN2_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define BTN2_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define BTN2_SetPullup()      do { WPUAbits.WPUA5 = 1; } while(0)
+#define BTN2_ResetPullup()    do { WPUAbits.WPUA5 = 0; } while(0)
+#define BTN2_SetPushPull()    do { ODCONAbits.ODCA5 = 1; } while(0)
+#define BTN2_SetOpenDrain()   do { ODCONAbits.ODCA5 = 0; } while(0)
+#define BTN2_SetAnalogMode()  do { ANSELAbits.ANSA5 = 1; } while(0)
+#define BTN2_SetDigitalMode() do { ANSELAbits.ANSA5 = 0; } while(0)
+
 // get/set RB7 procedures
 #define RB7_SetHigh()    do { LATBbits.LATB7 = 1; } while(0)
 #define RB7_SetLow()   do { LATBbits.LATB7 = 0; } while(0)
