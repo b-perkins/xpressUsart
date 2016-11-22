@@ -1,5 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"10 main.c
+"761 /opt/microchip/xc8/v1.38/include/pic16f18855.h
+[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S43 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"760
+[u S42 `S43 1 ]
+[n S42 . . ]
+"772
+[v _LATAbits `VS42 ~T0 @X0 0 e@22 ]
+"27 main.c
 [c E13638 0 1 2 3 4 5 6 .. ]
 [n E13638 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
 "109 mcc_generated_files/i2c2.h
@@ -24,22 +32,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
 "818 mcc_generated_files/tmr4.h
 [v _TMR4_HasOverflowOccured `(uc ~T0 @X0 0 ef ]
-"761 /opt/microchip/xc8/v1.38/include/pic16f18855.h
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"760
-[u S42 `S43 1 ]
-[n S42 . . ]
-"772
-[v _LATAbits `VS42 ~T0 @X0 0 e@22 ]
 "115 mcc_generated_files/eusart.h
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
 "8756 /opt/microchip/xc8/v1.38/include/pic16f18855.h
 [v _T6TMR `Vuc ~T0 @X0 0 e@664 ]
 "435 mcc_generated_files/tmr6.h
 [v _TMR6_Start `(v ~T0 @X0 0 ef ]
-"195 /opt/microchip/xc8/v1.38/include/stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "135 mcc_generated_files/eusart.h
 [v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
 "496 mcc_generated_files/tmr6.h
@@ -12821,207 +12819,292 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
 [; ;mcc.h: 72: void SYSTEM_Initialize(void);
 [; ;mcc.h: 85: void OSCILLATOR_Initialize(void);
-"8 main.c
-[v _EMC1001_Read `(uc ~T0 @X0 1 ef2`uc`*uc ]
-"9
-{
-[; ;main.c: 8: uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
-[; ;main.c: 9: {
-[e :U _EMC1001_Read ]
-"8
-[v _reg `uc ~T0 @X0 1 r1 ]
-[v _pData `*uc ~T0 @X0 1 r2 ]
-"9
-[f ]
+"9 main.c
+[v _LEDsON `(v ~T0 @X0 1 ef ]
 "10
-[v _status `E13638 ~T0 @X0 1 a ]
-[; ;main.c: 10: I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
-[e = _status . `E13638 2 ]
-"11
-[v F13832 `S1519 ~T0 @X0 -> 2 `i s trb ]
-[; ;main.c: 11: static I2C2_TRANSACTION_REQUEST_BLOCK trb[2];
-[; ;main.c: 13: I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, 0x38);
-"13
-[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U *U + &U F13832 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13832 `ui `ux &U _reg -> -> 1 `i `uc -> -> 56 `i `ui ]
-[; ;main.c: 14: I2C2_MasterReadTRBBuild(&trb[1], pData, 1, 0x38);
-"14
-[e ( _I2C2_MasterReadTRBBuild (4 , , , &U *U + &U F13832 * -> -> -> 1 `i `ui `ux -> -> # *U &U F13832 `ui `ux _pData -> -> 1 `i `uc -> -> 56 `i `ui ]
-[; ;main.c: 15: I2C2_MasterTRBInsert(2, &trb[0], &status);
-"15
-[e ( _I2C2_MasterTRBInsert (3 , , -> -> 2 `i `uc &U *U + &U F13832 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13832 `ui `ux &U _status ]
-[; ;main.c: 17: while(status == I2C2_MESSAGE_PENDING);
-"17
-[e $U 1522  ]
-[e :U 1523 ]
-[e :U 1522 ]
-[e $ == -> _status `i -> . `E13638 2 `i 1523  ]
-[e :U 1524 ]
-[; ;main.c: 19: return (status == I2C2_MESSAGE_COMPLETE);
-"19
-[e ) -> -> == -> _status `i -> . `E13638 0 `i `i `uc ]
-[e $UE 1521  ]
-[; ;main.c: 20: }
-"20
-[e :UE 1521 ]
-}
-"22
-[v _main `(v ~T0 @X0 1 ef ]
-"23
 {
-[; ;main.c: 22: void main(void)
-[; ;main.c: 23: {
-[e :U _main ]
+[; ;main.c: 9: void LEDsON(void)
+[; ;main.c: 10: {
+[e :U _LEDsON ]
 [f ]
-"24
-[v _data `uc ~T0 @X0 1 a ]
-"25
-[v _temp `c ~T0 @X0 1 a ]
-"26
-[v _templo `uc ~T0 @X0 1 a ]
-[; ;main.c: 24: uint8_t data;
-[; ;main.c: 25: int8_t temp;
-[; ;main.c: 26: uint8_t templo;
-[; ;main.c: 27: SYSTEM_Initialize();
-"27
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 28: (INTCONbits.GIE = 1);
-"28
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 29: (INTCONbits.PEIE = 1);
-"29
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 31: while (1)
-"31
+[; ;main.c: 11: do { LATAbits.LATA0 = 1; } while(0);
+"11
+[e :U 1524 ]
+{
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 1523 ]
+[; ;main.c: 12: do { LATAbits.LATA1 = 1; } while(0);
+"12
 [e :U 1527 ]
-[; ;main.c: 32: {
-"32
 {
-[; ;main.c: 33: if (TMR4_HasOverflowOccured())
-"33
-[e $ ! != -> ( _TMR4_HasOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1529  ]
-[; ;main.c: 34: {
-"34
-{
-[; ;main.c: 35: do { LATAbits.LATA2 = 1; } while(0);
-"35
-[e :U 1532 ]
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 1526 ]
+[; ;main.c: 13: do { LATAbits.LATA2 = 1; } while(0);
+"13
+[e :U 1530 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 1531 ]
-[; ;main.c: 36: data = EUSART_Read();
-"36
-[e = _data ( _EUSART_Read ..  ]
-[; ;main.c: 37: if (data == 'G' && T6TMR == 0x00)
-"37
-[e $ ! && == -> _data `ui -> 71 `ui == -> _T6TMR `i -> 0 `i 1533  ]
-[; ;main.c: 38: {
-"38
-{
-[; ;main.c: 39: TMR6_Start();
-"39
-[e ( _TMR6_Start ..  ]
-[; ;main.c: 40: do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
-"40
-[e :U 1536 ]
-{
-[e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
-}
-[e :U 1535 ]
-[; ;main.c: 41: printf("\n");
-"41
-[e ( _printf :s 1C ]
-[; ;main.c: 42: EUSART_Write(0x0D);
-"42
-[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
-[; ;main.c: 44: if (EMC1001_Read(0, (uint8_t*)&temp))
-"44
-[e $ ! != -> ( _EMC1001_Read (2 , -> -> 0 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1537  ]
-[; ;main.c: 45: {
-"45
-{
-[; ;main.c: 46: EMC1001_Read(2, &templo);
-"46
-[e ( _EMC1001_Read (2 , -> -> 2 `i `uc &U _templo ]
-[; ;main.c: 47: templo = templo >> 6;
-"47
-[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
-[; ;main.c: 48: if (temp < 0) templo = 3-templo;
-"48
-[e $ ! < -> _temp `i -> 0 `i 1538  ]
-[e = _templo -> - -> 3 `i -> _templo `i `uc ]
-[e :U 1538 ]
-[; ;main.c: 49: printf("%d.%d", temp, templo*25);
-"49
-[e ( _printf , , (. :s 2C -> _temp `i * -> _templo `i -> 25 `i ]
-"50
-}
-[e :U 1537 ]
-[; ;main.c: 50: }
-[; ;main.c: 51: TMR6_Stop();
-"51
-[e ( _TMR6_Stop ..  ]
-"52
-}
-[; ;main.c: 52: }
-[e $U 1539  ]
-"53
+[e :U 1529 ]
+[; ;main.c: 14: do { LATAbits.LATA3 = 1; } while(0);
+"14
 [e :U 1533 ]
-[; ;main.c: 53: else if (data != 0x00 && T6TMR == 0x00)
-[e $ ! && != -> _data `i -> 0 `i == -> _T6TMR `i -> 0 `i 1540  ]
-[; ;main.c: 54: {
-"54
 {
-[; ;main.c: 55: TMR6_Start();
-"55
-[e ( _TMR6_Start ..  ]
-[; ;main.c: 56: printf("\n");
-"56
-[e ( _printf :s 3C ]
-[; ;main.c: 57: EUSART_Write(0x0D);
-"57
-[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
-[; ;main.c: 58: printf("Unrecognized input : ");
-"58
-[e ( _printf :s 4C ]
-[; ;main.c: 59: EUSART_Write(data);
-"59
-[e ( _EUSART_Write (1 _data ]
-[; ;main.c: 60: EUSART_Write(0x0D);
-"60
-[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
-[; ;main.c: 61: TMR6_Stop();
-"61
-[e ( _TMR6_Stop ..  ]
-"62
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
 }
+[e :U 1532 ]
+[; ;main.c: 15: }
+"15
+[e :UE 1521 ]
+}
+"17
+[v _LEDsOFF `(v ~T0 @X0 1 ef ]
+"18
+{
+[; ;main.c: 17: void LEDsOFF(void)
+[; ;main.c: 18: {
+[e :U _LEDsOFF ]
+[f ]
+[; ;main.c: 19: do { LATAbits.LATA0 = 0; } while(0);
+"19
+[e :U 1537 ]
+{
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 1536 ]
+[; ;main.c: 20: do { LATAbits.LATA1 = 0; } while(0);
+"20
 [e :U 1540 ]
-"63
+{
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+}
 [e :U 1539 ]
-[; ;main.c: 62: }
-[; ;main.c: 63: do { LATAbits.LATA2 = 0; } while(0);
+[; ;main.c: 21: do { LATAbits.LATA2 = 0; } while(0);
+"21
 [e :U 1543 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 1542 ]
-"64
+[; ;main.c: 22: do { LATAbits.LATA3 = 0; } while(0);
+"22
+[e :U 1546 ]
+{
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 1529 ]
-"65
+[e :U 1545 ]
+[; ;main.c: 23: }
+"23
+[e :UE 1534 ]
 }
-[e :U 1526 ]
+"25
+[v _EMC1001_Read `(uc ~T0 @X0 1 ef2`uc`*uc ]
+"26
+{
+[; ;main.c: 25: uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
+[; ;main.c: 26: {
+[e :U _EMC1001_Read ]
+"25
+[v _reg `uc ~T0 @X0 1 r1 ]
+[v _pData `*uc ~T0 @X0 1 r2 ]
+"26
+[f ]
+"27
+[v _status `E13638 ~T0 @X0 1 a ]
+[; ;main.c: 27: I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
+[e = _status . `E13638 2 ]
+"28
+[v F13836 `S1519 ~T0 @X0 -> 2 `i s trb ]
+[; ;main.c: 28: static I2C2_TRANSACTION_REQUEST_BLOCK trb[2];
+[; ;main.c: 30: I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, 0x38);
+"30
+[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U *U + &U F13836 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13836 `ui `ux &U _reg -> -> 1 `i `uc -> -> 56 `i `ui ]
+[; ;main.c: 31: I2C2_MasterReadTRBBuild(&trb[1], pData, 1, 0x38);
 "31
-[e $U 1527  ]
-[e :U 1528 ]
-[; ;main.c: 64: }
-[; ;main.c: 65: }
-[; ;main.c: 66: }
-"66
-[e :UE 1525 ]
+[e ( _I2C2_MasterReadTRBBuild (4 , , , &U *U + &U F13836 * -> -> -> 1 `i `ui `ux -> -> # *U &U F13836 `ui `ux _pData -> -> 1 `i `uc -> -> 56 `i `ui ]
+[; ;main.c: 32: I2C2_MasterTRBInsert(2, &trb[0], &status);
+"32
+[e ( _I2C2_MasterTRBInsert (3 , , -> -> 2 `i `uc &U *U + &U F13836 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13836 `ui `ux &U _status ]
+[; ;main.c: 34: while(status == I2C2_MESSAGE_PENDING);
+"34
+[e $U 1548  ]
+[e :U 1549 ]
+[e :U 1548 ]
+[e $ == -> _status `i -> . `E13638 2 `i 1549  ]
+[e :U 1550 ]
+[; ;main.c: 36: return (status == I2C2_MESSAGE_COMPLETE);
+"36
+[e ) -> -> == -> _status `i -> . `E13638 0 `i `i `uc ]
+[e $UE 1547  ]
+[; ;main.c: 37: }
+"37
+[e :UE 1547 ]
 }
-[p f _printf 8388736 ]
-[a 2C 37 100 46 37 100 0 ]
-[a 4C 85 110 114 101 99 111 103 110 105 122 101 100 32 105 110 112 117 116 32 58 32 0 ]
-[a 1C 10 0 ]
-[a 3C 10 0 ]
+"39
+[v _main `(v ~T0 @X0 1 ef ]
+"40
+{
+[; ;main.c: 39: void main(void)
+[; ;main.c: 40: {
+[e :U _main ]
+[f ]
+"41
+[v _temp `c ~T0 @X0 1 a ]
+"42
+[v _data `uc ~T0 @X0 1 a ]
+"43
+[v _templo `uc ~T0 @X0 1 a ]
+"44
+[v _failcount `uc ~T0 @X0 1 a ]
+[; ;main.c: 41: int8_t temp;
+[; ;main.c: 42: uint8_t data;
+[; ;main.c: 43: uint8_t templo;
+[; ;main.c: 44: uint8_t failcount = 0x00;
+[e = _failcount -> -> 0 `i `uc ]
+[; ;main.c: 45: SYSTEM_Initialize();
+"45
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 46: (INTCONbits.GIE = 1);
+"46
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 47: (INTCONbits.PEIE = 1);
+"47
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 48: LEDsON();
+"48
+[e ( _LEDsON ..  ]
+[; ;main.c: 49: while(!TMR4_HasOverflowOccured());
+"49
+[e $U 1552  ]
+[e :U 1553 ]
+[e :U 1552 ]
+[e $ ! != -> ( _TMR4_HasOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1553  ]
+[e :U 1554 ]
+[; ;main.c: 50: LEDsOFF();
+"50
+[e ( _LEDsOFF ..  ]
+[; ;main.c: 52: while (1)
+"52
+[e :U 1556 ]
+[; ;main.c: 53: {
+"53
+{
+[; ;main.c: 54: if (TMR4_HasOverflowOccured())
+"54
+[e $ ! != -> ( _TMR4_HasOverflowOccured ..  `i -> -> -> 0 `i `uc `i 1558  ]
+[; ;main.c: 55: {
+"55
+{
+[; ;main.c: 56: do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
+"56
+[e :U 1561 ]
+{
+[e = . . _LATAbits 0 2 -> ~ -> . . _LATAbits 0 2 `i `uc ]
+}
+[e :U 1560 ]
+[; ;main.c: 57: data = EUSART_Read();
+"57
+[e = _data ( _EUSART_Read ..  ]
+[; ;main.c: 58: if (data == 'G' && T6TMR == 0x00)
+"58
+[e $ ! && == -> _data `ui -> 71 `ui == -> _T6TMR `i -> 0 `i 1562  ]
+[; ;main.c: 59: {
+"59
+{
+[; ;main.c: 60: TMR6_Start();
+"60
+[e ( _TMR6_Start ..  ]
+[; ;main.c: 61: do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
+"61
+[e :U 1565 ]
+{
+[e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
+}
+[e :U 1564 ]
+[; ;main.c: 65: if (EMC1001_Read(0, (uint8_t*)&temp))
+"65
+[e $ ! != -> ( _EMC1001_Read (2 , -> -> 0 `i `uc -> &U _temp `*uc `i -> -> -> 0 `i `uc `i 1566  ]
+[; ;main.c: 66: {
+"66
+{
+[; ;main.c: 67: EMC1001_Read(2, &templo);
+"67
+[e ( _EMC1001_Read (2 , -> -> 2 `i `uc &U _templo ]
+[; ;main.c: 68: templo = templo >> 6;
+"68
+[e = _templo -> >> -> _templo `i -> 6 `i `uc ]
+[; ;main.c: 69: if (temp < 0)
+"69
+[e $ ! < -> _temp `i -> 0 `i 1567  ]
+[; ;main.c: 70: templo = 3-templo;
+"70
+[e = _templo -> - -> 3 `i -> _templo `i `uc ]
+[e :U 1567 ]
+[; ;main.c: 71: EUSART_Write(0x4F);
+"71
+[e ( _EUSART_Write (1 -> -> 79 `i `uc ]
+"76
+}
+[e :U 1566 ]
+[; ;main.c: 76: }
+[; ;main.c: 77: TMR6_Stop();
+"77
+[e ( _TMR6_Stop ..  ]
+"78
+}
+[; ;main.c: 78: }
+[e $U 1568  ]
+"79
+[e :U 1562 ]
+[; ;main.c: 79: else if (data != 0x00 && T6TMR == 0x00)
+[e $ ! && != -> _data `i -> 0 `i == -> _T6TMR `i -> 0 `i 1569  ]
+[; ;main.c: 80: {
+"80
+{
+[; ;main.c: 81: do { LATAbits.LATA3 = 1; } while(0);
+"81
+[e :U 1572 ]
+{
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+}
+[e :U 1571 ]
+[; ;main.c: 82: TMR6_Start();
+"82
+[e ( _TMR6_Start ..  ]
+[; ;main.c: 83: failcount++;
+"83
+[e ++ _failcount -> -> 1 `i `uc ]
+[; ;main.c: 84: EUSART_Write(failcount);
+"84
+[e ( _EUSART_Write (1 _failcount ]
+[; ;main.c: 85: EUSART_Write(0x0D);
+"85
+[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
+[; ;main.c: 87: EUSART_Write(data);
+"87
+[e ( _EUSART_Write (1 _data ]
+[; ;main.c: 88: TMR6_Stop();
+"88
+[e ( _TMR6_Stop ..  ]
+"89
+}
+[e :U 1569 ]
+"90
+[e :U 1568 ]
+}
+[e :U 1558 ]
+"91
+}
+[e :U 1555 ]
+"52
+[e $U 1556  ]
+[e :U 1557 ]
+[; ;main.c: 89: }
+[; ;main.c: 90: }
+[; ;main.c: 91: }
+[; ;main.c: 92: }
+"92
+[e :UE 1551 ]
+}

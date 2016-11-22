@@ -1,9 +1,26 @@
 #include "mcc_generated_files/mcc.h"
-#define carriageReturn 0x0D
-#define nullChar    0x00
-#define EMC1001_ADDRESS     0x38   // slave device address
-#define TEMP_HI     0       // EMC1001- temperature value high byte 
-#define TEMP_LO     2       // EMC1001- low byte containing 1/4 deg fraction
+#define carriageReturn  0x0D
+#define nullChar        0x00
+#define period          0x2E
+#define EMC1001_ADDRESS 0x38   // slave device address
+#define TEMP_HI         0       // EMC1001- temperature value high byte 
+#define TEMP_LO         2       // EMC1001- low byte containing 1/4 deg fraction
+
+void LEDsON(void)
+{
+    LED1_SetHigh();
+    LED2_SetHigh();
+    LED3_SetHigh();
+    LED4_SetHigh();
+}
+
+void LEDsOFF(void)
+{
+    LED1_SetLow();
+    LED2_SetLow();
+    LED3_SetLow();
+    LED4_SetLow();
+}
 
 uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 {
@@ -21,16 +38,16 @@ uint8_t EMC1001_Read(uint8_t reg, uint8_t *pData)
 
 void main(void)
 {
-    uint8_t data;
     int8_t  temp;
+    uint8_t data;
     uint8_t templo;
+    uint8_t failcount = 0x00;
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
-    LED1_SetLow();  //  start with all leds low
-    LED2_SetLow();
-    LED3_SetLow();
-    LED4_SetLow();
+    LEDsON();
+    while(!TMR4_HasOverflowOccured());
+    LEDsOFF();//  start with all leds low
 
     while (1)
     {
@@ -42,26 +59,32 @@ void main(void)
             {
                 TMR6_Start();
                 LED1_Toggle();
-                printf("\n");
-                EUSART_Write(carriageReturn);
+//                printf("\n");
+//                EUSART_Write(carriageReturn);
 
                 if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) 
                 {
                     EMC1001_Read(TEMP_LO, &templo);     // get lsb 
                     templo = templo >> 6;                   
-                    if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
-                    printf("%d.%d", temp, templo*25);
+                    if (temp < 0) 
+                        templo = 3-templo;    // complement to 1 if T negative
+                    EUSART_Write(0x4F); //  0x4F just because
+//                    EUSART_Write((uint8_t)temp);
+//                    EUSART_Write(period);
+//                    EUSART_Write(templo*25);
+                    //printf("%d.%d", temp, templo*25);
                 }
                 TMR6_Stop();
             }
             else if (data != 0x00 && T6TMR == 0x00)  // 0x00 = null, 0x47 = 'G'
             {
+                LED4_SetHigh();
                 TMR6_Start();
-                printf("\n");
+                failcount++;
+                EUSART_Write(failcount);
                 EUSART_Write(carriageReturn);
-                printf("Unrecognized input : ");
+//                printf("Got ");
                 EUSART_Write(data);
-                EUSART_Write(carriageReturn);
                 TMR6_Stop();
             }
         }
