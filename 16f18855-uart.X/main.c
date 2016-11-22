@@ -30,8 +30,9 @@ void main(void)
 
     while (1)
     {
-        if (TMR6_HasOverflowOccured())
+        if (EUSART_Read() == 'G' && T6TMR == 0x00)  //  0x47 = 'G'
         {
+            TMR6_Start();
             LED1_Toggle();
             printf("\n");
             EUSART_Write(carriageReturn);
@@ -43,6 +44,7 @@ void main(void)
                 if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
                 printf("%d.%d", temp, templo*25);
             }
+            TMR6_Stop();
         }
     }
 }

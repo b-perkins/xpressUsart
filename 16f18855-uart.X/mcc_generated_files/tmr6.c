@@ -76,8 +76,8 @@ void TMR6_Initialize(void)
     // T6RSEL T6CKIPPS pin; 
     T6RST = 0x00;
 
-    // PR6 241; 
-    T6PR = 0xF1;
+    // PR6 47; 
+    T6PR = 0x2F;
 
     // TMR6 0; 
     T6TMR = 0x00;
@@ -86,7 +86,7 @@ void TMR6_Initialize(void)
     PIR4bits.TMR6IF = 0;
 
     // Start TMR6
-    TMR6_Start();
+    //TMR6_Start(); //  dont start the timer until char is received
 }
 
 void TMR6_ModeSet(TMR6_HLT_MODE mode)
@@ -116,6 +116,7 @@ void TMR6_Stop(void)
 {
     // Stop the Timer by writing to TMRxON bit
     T6CONbits.TMR6ON = 0;
+    T6TMR = 0x00;   //  Stop the timer when it overflows
 }
 
 void TMR6_StopTimer(void)
