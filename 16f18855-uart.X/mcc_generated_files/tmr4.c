@@ -64,8 +64,8 @@ void TMR4_Initialize(void)
 {
     // Set TMR4 to the options selected in the User Interface
 
-    // T4CKPS 1:1; T4OUTPS 1:1; TMR4ON off; 
-    T4CON = 0x00;
+    // T4CKPS 1:128; T4OUTPS 1:1; TMR4ON off; 
+    T4CON = 0x70;
 
     // T4CS LFINTOSC; 
     T4CLKCON = 0x04;
