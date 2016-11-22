@@ -27,12 +27,16 @@ void main(void)
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
+    LED1_SetLow();  //  start with all leds low
+    LED2_SetLow();
+    LED3_SetLow();
+    LED4_SetLow();
 
     while (1)
     {
         if (TMR4_HasOverflowOccured())  //  operates on 1 second interval
         {
-            LED3_SetHigh();
+            LED3_Toggle();
             data = EUSART_Read();       // read the eusart every second regardless
             if (data == 'G' && T6TMR == 0x00)  //  0x47 = 'G'
             {
@@ -60,7 +64,6 @@ void main(void)
                 EUSART_Write(carriageReturn);
                 TMR6_Stop();
             }
-            LED3_SetLow();
         }
     }
 }
