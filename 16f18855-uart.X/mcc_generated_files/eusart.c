@@ -77,7 +77,7 @@ void EUSART_Initialize(void)
 
 uint8_t EUSART_Read(void)
 {
-    LED2_Toggle();
+    LED2_SetHigh();
     while(!PIR3bits.RCIF)
     {
     }
@@ -90,7 +90,7 @@ uint8_t EUSART_Read(void)
         RC1STAbits.CREN = 0; 
         RC1STAbits.CREN = 1; 
     }
-
+    LED2_SetLow();
     return RC1REG;
 }
 
