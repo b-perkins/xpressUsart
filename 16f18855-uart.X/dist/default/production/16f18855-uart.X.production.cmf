@@ -12,40 +12,44 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production/16f18855-uart.X.production.obj
-cinit CODE 0 22 22 12 2
-text1 CODE 0 16F 16F B8 2
-text2 CODE 0 4D1 4D1 6 2
-text3 CODE 0 4B8 4B8 A 2
-text4 CODE 0 391 391 2D 2
-text5 CODE 0 35C 35C 35 2
-text6 CODE 0 406 406 1C 2
-text7 CODE 0 48E 48E F 2
-text8 CODE 0 49D 49D F 2
-text9 CODE 0 4D7 4D7 3 2
-text10 CODE 0 294 294 46 2
-text11 CODE 0 4C2 4C2 9 2
-text12 CODE 0 422 422 18 2
-text13 CODE 0 4AC 4AC C 2
-text14 CODE 0 320 320 3C 2
-text15 CODE 0 3E6 3E6 20 2
-text16 CODE 0 2DA 2DA 46 2
-text17 CODE 0 3BE 3BE 28 2
-text19 CODE 0 34 34 13B 2
-text20 CODE 0 452 452 18 2
-text21 CODE 0 47C 47C 12 2
-text22 CODE 0 4DA 4DA 1 2
-maintext CODE 0 227 227 6D 2
+cinit CODE 0 36 36 1A 2
+text1 CODE 0 190 190 B8 2
+text2 CODE 0 558 558 6 2
+text3 CODE 0 40D 40D 24 2
+text4 CODE 0 3B8 3B8 2D 2
+text5 CODE 0 383 383 35 2
+text6 CODE 0 46E 46E 1C 2
+text7 CODE 0 52B 52B F 2
+text8 CODE 0 53A 53A F 2
+text9 CODE 0 55E 55E 3 2
+text10 CODE 0 2B5 2B5 4C 2
+text11 CODE 0 549 549 9 2
+text12 CODE 0 4C0 4C0 18 2
+text13 CODE 0 48A 48A 1B 2
+text14 CODE 0 347 347 3C 2
+text15 CODE 0 431 431 20 2
+text16 CODE 0 301 301 46 2
+text17 CODE 0 3E5 3E5 28 2
+text19 CODE 0 50 50 140 2
+text20 CODE 0 4F0 4F0 18 2
+text21 CODE 0 51A 51A 11 2
+text22 CODE 0 561 561 1 2
+text23 CODE 0 451 451 1D 2
+text24 CODE 0 4A5 4A5 1B 2
+nvBANK0 BANK0 1 6B 6B 1 1
+maintext CODE 0 248 248 6D 2
 cstackCOMMON COMMON 1 77 77 7 1
-cstackBANK0 BANK0 1 20 20 22 1
-intentry CODE 0 4 4 1C 2
-bssBANK0 BANK0 1 42 42 1C 1
-stringtext STRCODE 0 46A 46A 12 2
-swtext1 CONST 0 43A 43A 18 2
-clrtext CODE 0 4CB 4CB 6 2
+cstackBANK0 BANK0 1 49 49 22 1
+intentry CODE 0 4 4 30 2
+bssBANK0 BANK0 1 20 20 29 1
+bssBANK1 BANK1 1 A0 A0 8 1
+stringtext STRCODE 0 508 508 12 2
+swtext1 CONST 0 4D8 4D8 18 2
+clrtext CODE 0 552 552 6 2
 bssCOMMON COMMON 1 70 70 7 1
-$/tmp/xcXv8kbi6.obj
+$/tmp/xcXCbm3d0.obj
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 20 20 2 2
+end_init CODE 0 34 34 2 2
 config CONFIG 0 8007 8007 5 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -53,8 +57,8 @@ config CONFIG 0 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 5E-6F 1
-RAM A0-EF 1
+RAM 6C-6F 1
+RAM A8-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
@@ -66,8 +70,8 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 5E-6F 1
-BANK1 A0-EF 1
+BANK0 6C-6F 1
+BANK1 A8-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
@@ -77,9 +81,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 4DB-1FFF 2
+CONST 562-1FFF 2
 ENTRY 2-3 2
-ENTRY 4DB-1FFF 2
+ENTRY 562-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -103,9 +107,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 203E-23EF 1
+STACK 2058-23EF 1
 CODE 2-3 2
-CODE 4DB-1FFF 2
+CODE 562-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -122,9 +126,9 @@ BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
-STRCODE 4DB-1FFF 2
+STRCODE 562-1FFF 2
 STRING 2-3 2
-STRING 4DB-1FFF 2
+STRING 562-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -139,362 +143,410 @@ STRING 4DB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/16f18855-uart.X.production.obj
-22 cinit CODE >7490:/tmp/xcXlJPWMH
-22 cinit CODE >7493:/tmp/xcXlJPWMH
-22 cinit CODE >7559:/tmp/xcXlJPWMH
-23 cinit CODE >7560:/tmp/xcXlJPWMH
-24 cinit CODE >7561:/tmp/xcXlJPWMH
-25 cinit CODE >7562:/tmp/xcXlJPWMH
-26 cinit CODE >7563:/tmp/xcXlJPWMH
-27 cinit CODE >7564:/tmp/xcXlJPWMH
-28 cinit CODE >7565:/tmp/xcXlJPWMH
-29 cinit CODE >7569:/tmp/xcXlJPWMH
-2A cinit CODE >7570:/tmp/xcXlJPWMH
-2B cinit CODE >7571:/tmp/xcXlJPWMH
-2C cinit CODE >7572:/tmp/xcXlJPWMH
-2D cinit CODE >7573:/tmp/xcXlJPWMH
-2E cinit CODE >7574:/tmp/xcXlJPWMH
-30 cinit CODE >7580:/tmp/xcXlJPWMH
-30 cinit CODE >7582:/tmp/xcXlJPWMH
-31 cinit CODE >7583:/tmp/xcXlJPWMH
-32 cinit CODE >7584:/tmp/xcXlJPWMH
+36 cinit CODE >7509:/tmp/xcXyXkjfM
+36 cinit CODE >7512:/tmp/xcXyXkjfM
+36 cinit CODE >7602:/tmp/xcXyXkjfM
+37 cinit CODE >7603:/tmp/xcXyXkjfM
+38 cinit CODE >7604:/tmp/xcXyXkjfM
+39 cinit CODE >7605:/tmp/xcXyXkjfM
+3A cinit CODE >7606:/tmp/xcXyXkjfM
+3B cinit CODE >7607:/tmp/xcXyXkjfM
+3C cinit CODE >7608:/tmp/xcXyXkjfM
+3D cinit CODE >7612:/tmp/xcXyXkjfM
+3E cinit CODE >7613:/tmp/xcXyXkjfM
+3F cinit CODE >7614:/tmp/xcXyXkjfM
+40 cinit CODE >7615:/tmp/xcXyXkjfM
+41 cinit CODE >7616:/tmp/xcXyXkjfM
+42 cinit CODE >7617:/tmp/xcXyXkjfM
+45 cinit CODE >7621:/tmp/xcXyXkjfM
+46 cinit CODE >7622:/tmp/xcXyXkjfM
+47 cinit CODE >7623:/tmp/xcXyXkjfM
+48 cinit CODE >7624:/tmp/xcXyXkjfM
+49 cinit CODE >7625:/tmp/xcXyXkjfM
+4A cinit CODE >7626:/tmp/xcXyXkjfM
+4C cinit CODE >7632:/tmp/xcXyXkjfM
+4C cinit CODE >7634:/tmp/xcXyXkjfM
+4D cinit CODE >7635:/tmp/xcXyXkjfM
+4E cinit CODE >7636:/tmp/xcXyXkjfM
 4 intentry CODE >51:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 9 intentry CODE >54:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 F intentry CODE >56:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 12 intentry CODE >57:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 13 intentry CODE >58:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
 19 intentry CODE >60:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
-1B intentry CODE >66:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
-4DA text22 CODE >728:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-4DA text22 CODE >731:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-47C text21 CODE >563:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-47C text21 CODE >567:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-480 text21 CODE >570:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-484 text21 CODE >572:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-489 text21 CODE >573:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-48A text21 CODE >574:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-48A text21 CODE >576:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-452 text20 CODE >581:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-453 text20 CODE >584:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-455 text20 CODE >587:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-45C text20 CODE >590:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-467 text20 CODE >594:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-469 text20 CODE >596:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-43A swtext1 CONST >259:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-34 text19 CODE >233:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-34 text19 CODE >241:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-36 text19 CODE >245:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-39 text19 CODE >248:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3A text19 CODE >249:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3C text19 CODE >250:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-45 text19 CODE >253:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-46 text19 CODE >255:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-47 text19 CODE >261:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-47 text19 CODE >263:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-49 text19 CODE >266:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-4D text19 CODE >267:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-54 text19 CODE >268:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-59 text19 CODE >270:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-5D text19 CODE >273:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-61 text19 CODE >276:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-65 text19 CODE >281:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-66 text19 CODE >284:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-69 text19 CODE >287:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-6A text19 CODE >291:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-6C text19 CODE >294:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-71 text19 CODE >297:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-72 text19 CODE >299:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-72 text19 CODE >304:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-74 text19 CODE >307:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-79 text19 CODE >309:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-7A text19 CODE >311:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-7A text19 CODE >313:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-7D text19 CODE >315:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-82 text19 CODE >316:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-85 text19 CODE >317:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-86 text19 CODE >321:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-8F text19 CODE >324:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-91 text19 CODE >328:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-96 text19 CODE >329:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-97 text19 CODE >333:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-9C text19 CODE >337:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-9D text19 CODE >339:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-9D text19 CODE >341:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-A0 text19 CODE >343:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-A5 text19 CODE >344:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-A8 text19 CODE >345:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-A9 text19 CODE >346:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-A9 text19 CODE >350:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-AA text19 CODE >354:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-BD text19 CODE >357:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-BE text19 CODE >360:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-C1 text19 CODE >363:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-C5 text19 CODE >366:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-C6 text19 CODE >381:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-C9 text19 CODE >384:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-D0 text19 CODE >385:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-D5 text19 CODE >386:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-DA text19 CODE >412:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-DD text19 CODE >413:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-DF text19 CODE >416:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-E4 text19 CODE >417:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-E5 text19 CODE >421:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-EA text19 CODE >424:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-EB text19 CODE >426:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-EB text19 CODE >429:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-EE text19 CODE >432:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-F3 text19 CODE >435:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-F5 text19 CODE >438:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-F8 text19 CODE >440:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-F9 text19 CODE >444:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-FE text19 CODE >449:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-102 text19 CODE >452:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-106 text19 CODE >454:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-109 text19 CODE >455:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-10A text19 CODE >456:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-10A text19 CODE >464:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-10C text19 CODE >467:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-111 text19 CODE >470:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-112 text19 CODE >474:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-11C text19 CODE >477:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-11D text19 CODE >479:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-11D text19 CODE >482:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-120 text19 CODE >486:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-125 text19 CODE >489:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-128 text19 CODE >492:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-12A text19 CODE >493:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-12B text19 CODE >494:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-12B text19 CODE >496:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-12C text19 CODE >497:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-131 text19 CODE >499:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-132 text19 CODE >506:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-136 text19 CODE >509:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-138 text19 CODE >511:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-139 text19 CODE >516:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-145 text19 CODE >519:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-149 text19 CODE >526:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-14A text19 CODE >529:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-14F text19 CODE >530:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-150 text19 CODE >531:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-150 text19 CODE >536:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-151 text19 CODE >538:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-153 text19 CODE >542:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-155 text19 CODE >543:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-156 text19 CODE >549:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-159 text19 CODE >550:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-15A text19 CODE >556:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-15F text19 CODE >557:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-162 text19 CODE >560:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-163 text19 CODE >259:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-16E text19 CODE >561:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3BE text17 CODE >694:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3BE text17 CODE >695:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3C0 text17 CODE >700:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3CD text17 CODE >702:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3D5 text17 CODE >703:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3DD text17 CODE >704:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3E5 text17 CODE >705:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2DA text16 CODE >641:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2DA text16 CODE >642:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2DC text16 CODE >648:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2DE text16 CODE >650:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2E5 text16 CODE >652:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2EC text16 CODE >653:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2F3 text16 CODE >654:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2FB text16 CODE >655:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-2FF text16 CODE >658:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-303 text16 CODE >661:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-307 text16 CODE >666:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-308 text16 CODE >669:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-30C text16 CODE >672:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-30D text16 CODE >675:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-30E text16 CODE >678:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-313 text16 CODE >682:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-31A text16 CODE >684:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-31D text16 CODE >688:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3E6 text15 CODE >707:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3E6 text15 CODE >708:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3E8 text15 CODE >713:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3F5 text15 CODE >714:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-3FD text15 CODE >715:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-405 text15 CODE >716:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-320 text14 CODE >8:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-322 text14 CODE >10:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-326 text14 CODE >13:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-334 text14 CODE >14:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-343 text14 CODE >15:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-350 text14 CODE >17:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-355 text14 CODE >19:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-4AC text13 CODE >55:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4AC text13 CODE >60:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4AF text13 CODE >63:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4B1 text13 CODE >66:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4B3 text13 CODE >69:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4B5 text13 CODE >72:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4B7 text13 CODE >74:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-422 text12 CODE >198:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-422 text12 CODE >200:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-427 text12 CODE >201:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-42B text12 CODE >202:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-42C text12 CODE >203:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-42D text12 CODE >205:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-42E text12 CODE >208:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-431 text12 CODE >210:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-433 text12 CODE >212:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-434 text12 CODE >214:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-436 text12 CODE >218:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-438 text12 CODE >220:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-439 text12 CODE >222:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
-4C2 text11 CODE >92:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4C2 text11 CODE >95:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4C5 text11 CODE >97:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4C6 text11 CODE >99:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4C7 text11 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4C9 text11 CODE >103:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-4CA text11 CODE >106:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-294 text10 CODE >51:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-294 text10 CODE >56:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-296 text10 CODE >57:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-297 text10 CODE >58:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-298 text10 CODE >63:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-29A text10 CODE >64:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-29C text10 CODE >65:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-29E text10 CODE >70:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A1 text10 CODE >71:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A3 text10 CODE >72:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A5 text10 CODE >77:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A6 text10 CODE >78:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A7 text10 CODE >79:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A8 text10 CODE >80:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2A9 text10 CODE >85:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2AA text10 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2AB text10 CODE >87:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2AC text10 CODE >94:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2B1 text10 CODE >95:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2B2 text10 CODE >96:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2B5 text10 CODE >97:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2B7 text10 CODE >98:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2B8 text10 CODE >100:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2BC text10 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2BF text10 CODE >102:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2C1 text10 CODE >103:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2C3 text10 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2C5 text10 CODE >105:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2CA text10 CODE >106:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2CE text10 CODE >108:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2D0 text10 CODE >109:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2D2 text10 CODE >110:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2D3 text10 CODE >112:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-2D9 text10 CODE >113:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
-4D7 text9 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4D7 text9 CODE >107:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4D9 text9 CODE >108:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-49D text8 CODE >63:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-49D text8 CODE >68:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A0 text8 CODE >71:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A2 text8 CODE >74:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A3 text8 CODE >77:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A4 text8 CODE >80:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A6 text8 CODE >83:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A7 text8 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4A9 text8 CODE >89:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-4AB text8 CODE >90:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
-48E text7 CODE >82:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-48E text7 CODE >85:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-491 text7 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-494 text7 CODE >87:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-497 text7 CODE >88:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-49A text7 CODE >89:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-49C text7 CODE >90:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
-406 text6 CODE >15:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-406 text6 CODE >43:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-409 text6 CODE >45:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-40B text6 CODE >46:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-40F text6 CODE >47:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-414 text6 CODE >48:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-419 text6 CODE >49:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-41D text6 CODE >52:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
-35C text5 CODE >6:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-35C text5 CODE >14:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-35F text5 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-363 text5 CODE >16:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-365 text5 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-367 text5 CODE >18:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-36C text5 CODE >19:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-370 text5 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-371 text5 CODE >22:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-376 text5 CODE >23:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-37E text5 CODE >24:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-382 text5 CODE >25:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-383 text5 CODE >27:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-388 text5 CODE >28:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-38C text5 CODE >30:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
-391 text4 CODE >6:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-391 text4 CODE >13:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-396 text4 CODE >14:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-398 text4 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-39A text4 CODE >16:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-39F text4 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3A3 text4 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3A4 text4 CODE >20:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3AC text4 CODE >21:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3B0 text4 CODE >22:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3B5 text4 CODE >23:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-3B9 text4 CODE >25:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
-4B8 text3 CODE >97:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4BA text3 CODE >99:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4BA text3 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4BD text3 CODE >103:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4C1 text3 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4D1 text2 CODE >111:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4D3 text2 CODE >113:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-4D6 text2 CODE >114:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
-16F text1 CODE >464:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-16F text1 CODE >533:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-174 text1 CODE >536:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-187 text1 CODE >538:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-18B text1 CODE >541:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-18F text1 CODE >542:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-190 text1 CODE >548:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-192 text1 CODE >635:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1A9 text1 CODE >1259:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1B4 text1 CODE >1261:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1B6 text1 CODE >1262:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1BA text1 CODE >1263:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1BF text1 CODE >1305:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1C5 text1 CODE >1306:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1DC text1 CODE >1305:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1E4 text1 CODE >1438:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1E8 text1 CODE >1439:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1EC text1 CODE >1472:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1F1 text1 CODE >1474:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-1F9 text1 CODE >1489:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-221 text1 CODE >1524:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-225 text1 CODE >1474:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-226 text1 CODE >1541:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
-227 maintext CODE >22:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-227 maintext CODE >27:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-22A maintext CODE >28:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-22B maintext CODE >29:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-22C maintext CODE >33:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-233 maintext CODE >35:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-236 maintext CODE >36:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-241 maintext CODE >37:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-248 maintext CODE >38:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-24C maintext CODE >40:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-258 maintext CODE >42:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-261 maintext CODE >43:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-26C maintext CODE >44:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-274 maintext CODE >45:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-293 maintext CODE >31:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
-4CB clrtext CODE >7548:/tmp/xcXlJPWMH
-4CB clrtext CODE >7549:/tmp/xcXlJPWMH
-4CC clrtext CODE >7550:/tmp/xcXlJPWMH
-4CC clrtext CODE >7551:/tmp/xcXlJPWMH
-4CD clrtext CODE >7552:/tmp/xcXlJPWMH
-4CE clrtext CODE >7553:/tmp/xcXlJPWMH
-4CF clrtext CODE >7554:/tmp/xcXlJPWMH
-4D0 clrtext CODE >7555:/tmp/xcXlJPWMH
+1C intentry CODE >61:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+1D intentry CODE >62:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+23 intentry CODE >64:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+26 intentry CODE >65:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+27 intentry CODE >66:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+2D intentry CODE >68:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+2F intentry CODE >74:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/interrupt_manager.c
+4A5 text24 CODE >184:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A5 text24 CODE >187:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A8 text24 CODE >191:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A9 text24 CODE >192:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4AA text24 CODE >196:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4B6 text24 CODE >197:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4B9 text24 CODE >199:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4BA text24 CODE >201:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4BF text24 CODE >202:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+451 text23 CODE >165:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+451 text23 CODE >169:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+456 text23 CODE >171:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+461 text23 CODE >172:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+464 text23 CODE >174:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+465 text23 CODE >176:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+46A text23 CODE >177:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+46B text23 CODE >178:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+46B text23 CODE >180:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+561 text22 CODE >728:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+561 text22 CODE >731:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+51A text21 CODE >563:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+51A text21 CODE >567:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+51E text21 CODE >570:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+523 text21 CODE >572:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+527 text21 CODE >573:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+528 text21 CODE >574:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+528 text21 CODE >576:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4F0 text20 CODE >581:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4F1 text20 CODE >584:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4F3 text20 CODE >587:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4FA text20 CODE >590:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+505 text20 CODE >594:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+507 text20 CODE >596:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D8 swtext1 CONST >259:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+50 text19 CODE >233:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+50 text19 CODE >241:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+52 text19 CODE >245:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+55 text19 CODE >248:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+56 text19 CODE >249:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+58 text19 CODE >250:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+61 text19 CODE >253:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+62 text19 CODE >255:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+63 text19 CODE >261:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+63 text19 CODE >263:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+65 text19 CODE >266:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+69 text19 CODE >267:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+70 text19 CODE >268:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+75 text19 CODE >270:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+79 text19 CODE >273:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+7D text19 CODE >276:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+81 text19 CODE >281:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+82 text19 CODE >284:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+85 text19 CODE >287:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+86 text19 CODE >291:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+88 text19 CODE >294:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+8D text19 CODE >297:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+8E text19 CODE >299:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+8E text19 CODE >304:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+90 text19 CODE >307:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+95 text19 CODE >309:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+96 text19 CODE >311:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+96 text19 CODE >313:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+99 text19 CODE >315:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+9E text19 CODE >316:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+A1 text19 CODE >317:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+A2 text19 CODE >321:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+AB text19 CODE >324:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+AD text19 CODE >328:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+B2 text19 CODE >329:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+B3 text19 CODE >333:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+B8 text19 CODE >337:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+B9 text19 CODE >339:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+B9 text19 CODE >341:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+BC text19 CODE >343:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+C1 text19 CODE >344:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+C4 text19 CODE >345:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+C5 text19 CODE >346:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+C5 text19 CODE >350:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+C6 text19 CODE >354:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+D9 text19 CODE >357:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+DA text19 CODE >360:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+DD text19 CODE >363:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+E1 text19 CODE >366:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+E2 text19 CODE >381:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+E5 text19 CODE >384:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+EC text19 CODE >385:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+F1 text19 CODE >386:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+F6 text19 CODE >412:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+F9 text19 CODE >413:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+FB text19 CODE >416:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+100 text19 CODE >417:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+101 text19 CODE >421:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+106 text19 CODE >424:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+107 text19 CODE >426:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+107 text19 CODE >429:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+10A text19 CODE >432:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+10F text19 CODE >435:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+111 text19 CODE >438:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+114 text19 CODE >440:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+115 text19 CODE >444:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+11B text19 CODE >449:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+11F text19 CODE >452:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+123 text19 CODE >454:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+126 text19 CODE >455:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+127 text19 CODE >456:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+127 text19 CODE >464:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+129 text19 CODE >467:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+12E text19 CODE >470:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+12F text19 CODE >474:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+13A text19 CODE >477:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+13B text19 CODE >479:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+13B text19 CODE >482:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+13E text19 CODE >486:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+143 text19 CODE >489:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+146 text19 CODE >492:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+148 text19 CODE >493:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+149 text19 CODE >494:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+149 text19 CODE >496:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+14A text19 CODE >497:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+14F text19 CODE >499:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+150 text19 CODE >506:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+154 text19 CODE >509:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+156 text19 CODE >511:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+157 text19 CODE >516:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+164 text19 CODE >519:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+168 text19 CODE >526:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+16A text19 CODE >529:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+16F text19 CODE >530:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+170 text19 CODE >531:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+170 text19 CODE >536:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+172 text19 CODE >538:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+174 text19 CODE >542:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+176 text19 CODE >543:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+177 text19 CODE >549:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+17A text19 CODE >550:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+17B text19 CODE >556:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+180 text19 CODE >557:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+183 text19 CODE >560:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+184 text19 CODE >259:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+18F text19 CODE >561:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+3E5 text17 CODE >694:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+3E5 text17 CODE >695:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+3E7 text17 CODE >700:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+3F4 text17 CODE >702:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+3FC text17 CODE >703:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+404 text17 CODE >704:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+40C text17 CODE >705:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+301 text16 CODE >641:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+301 text16 CODE >642:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+303 text16 CODE >648:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+305 text16 CODE >650:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+30C text16 CODE >652:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+313 text16 CODE >653:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+31A text16 CODE >654:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+322 text16 CODE >655:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+326 text16 CODE >658:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+32A text16 CODE >661:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+32E text16 CODE >666:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+32F text16 CODE >669:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+333 text16 CODE >672:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+334 text16 CODE >675:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+335 text16 CODE >678:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+33A text16 CODE >682:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+341 text16 CODE >684:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+344 text16 CODE >688:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+431 text15 CODE >707:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+431 text15 CODE >708:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+433 text15 CODE >713:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+440 text15 CODE >714:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+448 text15 CODE >715:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+450 text15 CODE >716:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+347 text14 CODE >8:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+349 text14 CODE >10:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+34D text14 CODE >13:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+35B text14 CODE >14:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+36A text14 CODE >15:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+377 text14 CODE >17:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+37C text14 CODE >19:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+48A text13 CODE >75:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+48A text13 CODE >78:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+48C text13 CODE >79:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+48D text13 CODE >84:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+490 text13 CODE >87:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+492 text13 CODE >90:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+494 text13 CODE >93:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+496 text13 CODE >96:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+498 text13 CODE >100:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+499 text13 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+49A text13 CODE >102:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+49F text13 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A0 text13 CODE >105:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A1 text13 CODE >106:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A2 text13 CODE >109:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4A4 text13 CODE >110:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+4C0 text12 CODE >198:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4C0 text12 CODE >200:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4C5 text12 CODE >201:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4C9 text12 CODE >202:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4CA text12 CODE >203:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4CB text12 CODE >205:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4CC text12 CODE >208:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4CF text12 CODE >210:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D1 text12 CODE >212:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D2 text12 CODE >214:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D4 text12 CODE >218:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D6 text12 CODE >220:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+4D7 text12 CODE >222:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/i2c2.c
+549 text11 CODE >92:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+549 text11 CODE >95:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+54C text11 CODE >97:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+54D text11 CODE >99:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+54E text11 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+550 text11 CODE >103:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+551 text11 CODE >106:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+2B5 text10 CODE >51:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2B5 text10 CODE >56:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2B7 text10 CODE >57:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2B8 text10 CODE >58:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2B9 text10 CODE >63:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2BB text10 CODE >64:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2BD text10 CODE >65:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2BF text10 CODE >70:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C2 text10 CODE >71:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C4 text10 CODE >72:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C6 text10 CODE >77:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C7 text10 CODE >78:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C8 text10 CODE >79:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2C9 text10 CODE >80:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2CA text10 CODE >85:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2CB text10 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2CC text10 CODE >87:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2CD text10 CODE >94:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2D2 text10 CODE >95:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2D3 text10 CODE >96:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2D6 text10 CODE >97:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2D8 text10 CODE >98:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2D9 text10 CODE >100:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2DD text10 CODE >101:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2E0 text10 CODE >102:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2E5 text10 CODE >103:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2E8 text10 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2EA text10 CODE >105:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2EC text10 CODE >106:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2F1 text10 CODE >107:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2F5 text10 CODE >109:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2F7 text10 CODE >110:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2F9 text10 CODE >111:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+2FA text10 CODE >113:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+300 text10 CODE >114:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/pin_manager.c
+55E text9 CODE >104:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+55E text9 CODE >107:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+560 text9 CODE >108:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+53A text8 CODE >63:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+53A text8 CODE >68:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+53D text8 CODE >71:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+53F text8 CODE >74:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+540 text8 CODE >77:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+541 text8 CODE >80:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+543 text8 CODE >83:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+544 text8 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+546 text8 CODE >89:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+548 text8 CODE >90:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/tmr6.c
+52B text7 CODE >82:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+52B text7 CODE >85:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+52E text7 CODE >86:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+531 text7 CODE >87:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+534 text7 CODE >88:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+537 text7 CODE >89:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+539 text7 CODE >90:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/mcc.c
+46E text6 CODE >15:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+46E text6 CODE >43:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+471 text6 CODE >45:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+473 text6 CODE >46:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+477 text6 CODE >47:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+47C text6 CODE >48:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+481 text6 CODE >49:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+485 text6 CODE >52:/opt/microchip/xc8/v1.38/sources/common/Umul16.c
+383 text5 CODE >6:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+383 text5 CODE >14:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+386 text5 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+38A text5 CODE >16:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+38C text5 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+38E text5 CODE >18:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+393 text5 CODE >19:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+397 text5 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+398 text5 CODE >22:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+39D text5 CODE >23:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3A5 text5 CODE >24:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3A9 text5 CODE >25:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3AA text5 CODE >27:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3AF text5 CODE >28:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3B3 text5 CODE >30:/opt/microchip/xc8/v1.38/sources/common/lwdiv.c
+3B8 text4 CODE >6:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3B8 text4 CODE >13:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3BD text4 CODE >14:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3BF text4 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3C1 text4 CODE >16:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3C6 text4 CODE >17:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3CA text4 CODE >15:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3CB text4 CODE >20:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3D3 text4 CODE >21:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3D7 text4 CODE >22:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3DC text4 CODE >23:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+3E0 text4 CODE >25:/opt/microchip/xc8/v1.38/sources/common/lwmod.c
+40D text3 CODE >132:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+40F text3 CODE >134:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+412 text3 CODE >138:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+415 text3 CODE >140:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+419 text3 CODE >141:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+41A text3 CODE >142:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+41A text3 CODE >144:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+41B text3 CODE >145:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+428 text3 CODE >146:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+42B text3 CODE >148:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+42C text3 CODE >150:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+42E text3 CODE >152:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+430 text3 CODE >153:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+558 text2 CODE >160:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+55A text2 CODE >162:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+55D text2 CODE >163:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_generated_files/eusart.c
+190 text1 CODE >464:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+190 text1 CODE >533:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+195 text1 CODE >536:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1A8 text1 CODE >538:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1AC text1 CODE >541:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1B0 text1 CODE >542:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1B1 text1 CODE >548:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1B3 text1 CODE >635:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1CA text1 CODE >1259:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1D5 text1 CODE >1261:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1D7 text1 CODE >1262:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1DB text1 CODE >1263:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1E0 text1 CODE >1305:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1E6 text1 CODE >1306:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+1FD text1 CODE >1305:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+205 text1 CODE >1438:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+209 text1 CODE >1439:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+20D text1 CODE >1472:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+212 text1 CODE >1474:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+21A text1 CODE >1489:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+242 text1 CODE >1524:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+246 text1 CODE >1474:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+247 text1 CODE >1541:/opt/microchip/xc8/v1.38/sources/common/doprnt.c
+248 maintext CODE >22:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+248 maintext CODE >27:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+24B maintext CODE >28:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+24C maintext CODE >29:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+24D maintext CODE >33:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+254 maintext CODE >35:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+257 maintext CODE >36:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+262 maintext CODE >37:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+269 maintext CODE >38:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+26D maintext CODE >40:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+279 maintext CODE >42:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+282 maintext CODE >43:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+28D maintext CODE >44:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+295 maintext CODE >45:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+2B4 maintext CODE >31:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/main.c
+552 clrtext CODE >7591:/tmp/xcXyXkjfM
+552 clrtext CODE >7592:/tmp/xcXyXkjfM
+553 clrtext CODE >7593:/tmp/xcXyXkjfM
+553 clrtext CODE >7594:/tmp/xcXyXkjfM
+554 clrtext CODE >7595:/tmp/xcXyXkjfM
+555 clrtext CODE >7596:/tmp/xcXyXkjfM
+556 clrtext CODE >7597:/tmp/xcXyXkjfM
+557 clrtext CODE >7598:/tmp/xcXyXkjfM
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -508,15 +560,16 @@ FE text19 CODE >449:/home/devsys/MPLABXProjects/xpressUsart/16f18855-uart.X/mcc_
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___lwmod@counter 2D 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___lwmod@counter 56 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Hspace_0 800C 0 ABS 0 - -
-__Hspace_1 7E 0 ABS 0 - -
+__Hspace_1 A8 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __size_of_TMR6_Start 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-I2C2_MasterWrite@trBlock 57 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterWrite@trBlock 42 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
+_RXPPSbits ECB 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_I2C2_BusCollisionISR 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ltemp0 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ltemp1 82 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -534,34 +587,34 @@ _WPUA F39 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _WPUB F44 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _WPUC F4F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _WPUE F65 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXv8kbi6.obj
-_main 44E 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXCbm3d0.obj
+_main 490 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-start 40 0 CODE 0 init /tmp/xcXv8kbi6.obj
+start 68 0 CODE 0 init /tmp/xcXCbm3d0.obj
 ttemp 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_EUSART_Write 970 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
+_EUSART_Write 81A 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
 __size_of_TMR6_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of___lwmod 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-I2C2_ISR@pi2c_buf_ptr 71 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+I2C2_ISR@pi2c_buf_ptr 31 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __CFG_SCANE$available 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_I2C2_ISR 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_Initialize 874 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_BusCollisionISR 9B6 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
-__end_of_EUSART_Initialize 970 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
+?___wmul 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_Initialize 9B0 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_BusCollisionISR AC4 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
+__end_of_EUSART_Initialize 94A 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-_I2C2_MasterWriteTRBBuild 7CC 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_MasterWriteTRBBuild 862 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
 _T6AINPPSbits E9E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-printf@c 3D 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-printf@f 2E 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_FunctionComplete 91C 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
-_i2c2_state 4A 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterReadTRBBuild@length 21 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+printf@c 66 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+printf@f 57 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_FunctionComplete A56 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
+_i2c2_state 34 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterReadTRBBuild@length 4A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 ttemp0 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ttemp1 81 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -569,12 +622,12 @@ ttemp3 87 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _T6HLTbits 29B 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXv8kbi6.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXCbm3d0.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _SSP2CLKPPSbits EC8 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -587,39 +640,42 @@ wtemp6 7F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_EUSART_Write 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_I2C2_FunctionComplete 8F8 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
+__end_of_EUSART_Transmit_ISR 8DC 0 CODE 0 text23 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_FunctionComplete A34 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
-I2C2_MasterRead@trBlock 53 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
-___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-printf@flag 39 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-printf@prec 3A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterReadTRBBuild@ptrb 26 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterRead@trBlock 3E 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+_eusartTxBuffer 20 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+___wmul@multiplicand 4B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+printf@flag 62 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+printf@prec 63 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterReadTRBBuild@ptrb 4F 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _ANSELA F38 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _ANSELB F43 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _ANSELC F4E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_I2C2_Initialize 844 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
-_I2C2_ISR 68 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_Initialize 980 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_ISR A0 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
 _T6RSTbits 29D 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_INTERRUPT_InterruptManager 40 0 CODE 0 intentry dist/default/production/16f18855-uart.X.production.obj
-__end_of___wmul 844 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
-__end_of_EUSART_Write 984 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_ISR 2DE 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
+__end_of_INTERRUPT_InterruptManager 68 0 CODE 0 intentry dist/default/production/16f18855-uart.X.production.obj
+__end_of___wmul 914 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
+__end_of_EUSART_Write 862 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_ISR 320 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-?_printf 2E 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-___lwmod@divisor 28 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+?_printf 57 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
+___lwmod@divisor 51 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of___lwdiv 722 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
-__end_of___lwmod 77C 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
-PIN_MANAGER_Initialize@state 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-_dpowers 8D4 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
-_EUSART_Initialize 958 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
-___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of___lwdiv 770 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
+__end_of___lwmod 7CA 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
+PIN_MANAGER_Initialize@state 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+_dpowers A10 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
+_EUSART_Initialize 914 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
+___lwdiv@quotient 4E 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __size_of_putch 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___lwmod@dividend 2A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-_PIN_MANAGER_Initialize 528 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterWriteTRBBuild@ptrb 26 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___lwmod@dividend 53 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+_PIN_MANAGER_Initialize 56A 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterWriteTRBBuild@ptrb 4F 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _SSP2CON1bits 19A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-start_initialization 44 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
+start_initialization 6C 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
 _SSP2CON2bits 19B 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _ODCONA F3A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _ODCONB F45 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -627,29 +683,30 @@ _ODCONC F50 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _OSCFRQ 893 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _p_i2c2_trb_current 74 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+_eusartRxBuffer A0 0 BANK1 1 bssBANK1 dist/default/production/16f18855-uart.X.production.obj
 __size_of_I2C2_MasterWriteTRBBuild 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterWriteTRBBuild@pdata 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterWriteTRBBuild@pdata 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _RC0PPS F20 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _RC1REG 119 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _RC1STA 11D 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _RC3PPS F23 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _RC4PPS F24 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _RC6PPS F26 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_SYSTEM_Initialize 93A 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
-clear_ram0 996 0 CODE 0 clrtext dist/default/production/16f18855-uart.X.production.obj
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterTRBInsert@count 23 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterTRBInsert@ptrb_list 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterTRBInsert@pflag 21 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_SYSTEM_Initialize A74 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
+clear_ram0 AA4 0 CODE 0 clrtext dist/default/production/16f18855-uart.X.production.obj
+__pcstackBANK0 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterTRBInsert@count 4C 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterTRBInsert@ptrb_list 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterTRBInsert@pflag 4A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _TX1REG 11A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _TX1STA 11E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __CFG_RSTOSC$HFINTPLL 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_printf 44E 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterWriteTRBBuild@length 21 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_printf 490 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterWriteTRBBuild@length 4A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __size_of_I2C2_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-EMC1001_Read@status 2B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterReadTRBBuild@pdata 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXv8kbi6.obj
+EMC1001_Read@status 54 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterReadTRBBuild@pdata 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXCbm3d0.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -660,7 +717,7 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 68 0 CODE 0 cinit -
+__Hcinit A0 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __size_of_I2C2_MasterReadTRBBuild 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -687,7 +744,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
-___lwdiv@counter 27 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___lwdiv@counter 50 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -715,7 +772,7 @@ __Hmaintext 0 0 ABS 0 maintext -
 _BAUD1CON 11F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10018 0 CONFIG 0 config -
-I2C2_MasterWriteTRBBuild@address 22 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterWriteTRBBuild@address 4B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -726,7 +783,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit 44 0 CODE 0 cinit -
+__Lcinit 6C 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -754,10 +811,10 @@ __Lstack 0 0 STACK 2 stack -
 _SSP2DATPPSbits EC9 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _PORTAbits C 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _INTCONbits B 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-EMC1001_Read@pData 27 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+EMC1001_Read@pData 50 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 40 0 CODE 0 init -
+__Hinit 68 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -771,7 +828,7 @@ __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 40 0 CODE 0 init -
+__Linit 68 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -783,10 +840,11 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
+__pnvBANK0 6B 0 BANK0 1 nvBANK0 dist/default/production/16f18855-uart.X.production.obj
 _SSP2CON1 19A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _SSP2CON3 19C 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _SSP2STAT 199 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___wmul 80C 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
+___wmul 8DC 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -795,42 +853,48 @@ __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production/16f1885
 _GIE 5F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _PR6 299 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __S0 800C 0 ABS 0 - -
-__S1 7E 0 ABS 0 - -
+__S1 A8 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __size_of_I2C2_MasterTRBInsert 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_I2C2_BusCollisionISR 9B4 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_MasterWriteTRBBuild 80C 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
-_SYSTEM_Initialize 91C 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
-I2C2_MasterReadTRBBuild@address 22 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_BusCollisionISR AC2 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_MasterWriteTRBBuild 8A2 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
+__end_of_EUSART_Receive_ISR 980 0 CODE 0 text24 dist/default/production/16f18855-uart.X.production.obj
+_SYSTEM_Initialize A56 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
+I2C2_MasterReadTRBBuild@address 4B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _p_i2c2_current 73 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-__end_of_I2C2_MasterTRBInsert 640 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXv8kbi6.obj
+__end_of_I2C2_MasterTRBInsert 68E 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXCbm3d0.obj
 _T6CLKCON 29C 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_TMR6_Start 9AE 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
+_TMR6_Start ABC 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
 __size_of_I2C2_FunctionComplete 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production/16f18855-uart.X.production.obj
 _PIE3bits 719 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__ptext10 528 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
-__ptext11 984 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
-__ptext12 844 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
-__ptext13 958 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
-__ptext14 640 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
-__ptext15 7CC 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
-__ptext16 5B4 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
-__ptext17 77C 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
-__ptext19 68 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
-__ptext20 8A4 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
-__ptext21 8F8 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
-__ptext22 9B4 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
-__end_of_PIN_MANAGER_Initialize 5B4 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
-___lwdiv 6B8 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
-___lwmod 722 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
+__ptext10 56A 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
+__ptext11 A92 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
+__ptext12 980 0 CODE 0 text12 dist/default/production/16f18855-uart.X.production.obj
+__ptext13 914 0 CODE 0 text13 dist/default/production/16f18855-uart.X.production.obj
+__ptext14 68E 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
+__ptext15 862 0 CODE 0 text15 dist/default/production/16f18855-uart.X.production.obj
+__ptext16 602 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
+__ptext17 7CA 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
+__ptext19 A0 0 CODE 0 text19 dist/default/production/16f18855-uart.X.production.obj
+__ptext20 9E0 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
+__ptext21 A34 0 CODE 0 text21 dist/default/production/16f18855-uart.X.production.obj
+__ptext22 AC2 0 CODE 0 text22 dist/default/production/16f18855-uart.X.production.obj
+__ptext23 8A2 0 CODE 0 text23 dist/default/production/16f18855-uart.X.production.obj
+__ptext24 94A 0 CODE 0 text24 dist/default/production/16f18855-uart.X.production.obj
+_EUSART_Receive_ISR 94A 0 CODE 0 text24 dist/default/production/16f18855-uart.X.production.obj
+__end_of_PIN_MANAGER_Initialize 602 0 CODE 0 text10 dist/default/production/16f18855-uart.X.production.obj
+___lwdiv 706 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
+___lwmod 770 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -853,94 +917,98 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 44E 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
+__pmaintext 490 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
-_printf 2DE 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
+_printf 320 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___wmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___wmul@multiplier 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 _LATAbits 16 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_Stop 8D4 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_Stop A10 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
 __size_of_I2C2_Stop 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _T6CONbits 29A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-main@temp 40 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+main@temp 69 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+___lwdiv@divisor 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 I2C2_ISR@i2c_address 75 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXv8kbi6.obj
-stacklo 203E 0 ABS 0 - /tmp/xcXv8kbi6.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXCbm3d0.obj
+stacklo 2058 0 ABS 0 - /tmp/xcXCbm3d0.obj
 _OSCCON1 88D 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _OSCCON3 88F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _OSCTUNE 892 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-_I2C2_Stop 8A4 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
+_I2C2_Stop 9E0 0 CODE 0 text20 dist/default/production/16f18855-uart.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_TMR6_Start 9B4 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
+__end_of_TMR6_Start AC2 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR3bits 70F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _PIR4bits 710 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__Lend_init 40 0 CODE 0 end_init -
+__Lend_init 68 0 CODE 0 end_init -
 __CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-printf@ap 38 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+printf@ap 61 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-end_of_initialization 60 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
-__Hintentry 40 0 CODE 0 intentry -
+end_of_initialization 98 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
+__Hintentry 68 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __size_of_printf 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _PPSLOCKbits E8F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
-_EMC1001_Read 640 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
-___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-?___lwdiv 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-?___lwmod 28 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+_EMC1001_Read 68E 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
+___lwdiv@dividend 4B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+?___lwdiv 49 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+?___lwmod 51 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__end_of_TMR6_Initialize 958 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
-__ptext1 2DE 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
-__ptext2 9A2 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
-__ptext3 970 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
-__ptext4 722 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
-__ptext5 6B8 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
-__ptext6 80C 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
-__ptext7 91C 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
-__ptext8 93A 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
-__ptext9 9AE 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
-_i2c2_object 42 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__end_of_TMR6_Initialize A92 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
+__ptext1 320 0 CODE 0 text1 dist/default/production/16f18855-uart.X.production.obj
+__ptext2 AB0 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
+__ptext3 81A 0 CODE 0 text3 dist/default/production/16f18855-uart.X.production.obj
+__ptext4 770 0 CODE 0 text4 dist/default/production/16f18855-uart.X.production.obj
+__ptext5 706 0 CODE 0 text5 dist/default/production/16f18855-uart.X.production.obj
+__ptext6 8DC 0 CODE 0 text6 dist/default/production/16f18855-uart.X.production.obj
+__ptext7 A56 0 CODE 0 text7 dist/default/production/16f18855-uart.X.production.obj
+__ptext8 A74 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
+__ptext9 ABC 0 CODE 0 text9 dist/default/production/16f18855-uart.X.production.obj
+_eusartTxBufferRemaining 6B 0 BANK0 1 nvBANK0 dist/default/production/16f18855-uart.X.production.obj
+_i2c2_object 28 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__pstringtext 8D4 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
+__pstringtext A10 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_i2c2_trb_count 72 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+_i2c2_trb_count 35 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-EUSART_Write@txData 20 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-__end_of__initialization 60 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
+EUSART_Write@txData 4A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of__initialization 98 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
 __size_of_EMC1001_Read 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Lfunctab 0 0 CODE 0 functab -
 _SP1BRGH 11C 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _SP1BRGL 11B 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-main@templo 41 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+main@templo 6A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+_eusartRxCount 32 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+__size_of_EUSART_Transmit_ISR 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 __size_of_EUSART_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-I2C2_ISR@i2c_10bit_address_restart 49 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
-_TMR6_Initialize 93A 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
+I2C2_ISR@i2c_10bit_address_restart 2F 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+_TMR6_Initialize A74 0 CODE 0 text8 dist/default/production/16f18855-uart.X.production.obj
 __pcstackCOMMON 77 0 COMMON 1 cstackCOMMON dist/default/production/16f18855-uart.X.production.obj
 _SSP2ADD 197 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _SSP2BUF 196 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__Hend_init 44 0 CODE 0 end_init -
-__end_of_EMC1001_Read 6B8 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
-putch@txData 21 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-__end_of_main 528 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
-printf@val 3B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-__end_of_dpowers 8E8 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
-_I2C2_MasterReadTRBBuild 77C 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
+__Hend_init 6C 0 CODE 0 end_init -
+__end_of_EMC1001_Read 706 0 CODE 0 text14 dist/default/production/16f18855-uart.X.production.obj
+putch@txData 4B 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_main 56A 0 CODE 0 maintext dist/default/production/16f18855-uart.X.production.obj
+printf@val 64 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__end_of_dpowers A24 0 STRCODE 0 stringtext dist/default/production/16f18855-uart.X.production.obj
+_I2C2_MasterReadTRBBuild 7CA 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
 _OSCEN 891 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _T6CON 29A 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _T6HLT 29B 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
@@ -949,31 +1017,38 @@ _T6TMR 298 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _TRISA 11 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _TRISB 12 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 _TRISC 13 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_putch 9AE 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
+__end_of_putch ABC 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_putch 9A2 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
+_putch AB0 0 CODE 0 text2 dist/default/production/16f18855-uart.X.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__end_of_I2C2_MasterReadTRBBuild 7CC 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
+__end_of_I2C2_MasterReadTRBBuild 81A 0 CODE 0 text17 dist/default/production/16f18855-uart.X.production.obj
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production/16f18855-uart.X.production.obj
-__end_of_OSCILLATOR_Initialize 996 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
+__end_of_OSCILLATOR_Initialize AA4 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-__initialization 44 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
+__initialization 6C 0 CODE 0 cinit dist/default/production/16f18855-uart.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-I2C2_ISR@i2c_bytes_left 70 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
-__pbssBANK0 42 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+I2C2_ISR@i2c_bytes_left 30 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production/16f18855-uart.X.production.obj
 __Hstringtext 0 0 ABS 0 stringtext -
 _PPSLOCK E8F 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
+_EUSART_Transmit_ISR 8A2 0 CODE 0 text23 dist/default/production/16f18855-uart.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
-___wmul@product 24 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-_i2c2_tr_queue 5B 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+_eusartRxHead 70 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+_eusartRxTail 33 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+___wmul@product 4D 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+__size_of_EUSART_Receive_ISR 0 0 ABS 0 - dist/default/production/16f18855-uart.X.production.obj
+_i2c2_tr_queue 46 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
 I2C2_Stop@completion_code 78 0 COMMON 1 cstackCOMMON dist/default/production/16f18855-uart.X.production.obj
-_I2C2_MasterTRBInsert 5B4 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
-EMC1001_Read@reg 2A 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
-EMC1001_Read@trb 4B 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
-__pswtext1 874 0 CONST 0 swtext1 dist/default/production/16f18855-uart.X.production.obj
-_OSCILLATOR_Initialize 984 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
+_eusartTxHead 71 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+_eusartTxTail 72 0 COMMON 1 bssCOMMON dist/default/production/16f18855-uart.X.production.obj
+_I2C2_MasterTRBInsert 602 0 CODE 0 text16 dist/default/production/16f18855-uart.X.production.obj
+EMC1001_Read@reg 53 0 BANK0 1 cstackBANK0 dist/default/production/16f18855-uart.X.production.obj
+EMC1001_Read@trb 36 0 BANK0 1 bssBANK0 dist/default/production/16f18855-uart.X.production.obj
+__pswtext1 9B0 0 CONST 0 swtext1 dist/default/production/16f18855-uart.X.production.obj
+_OSCILLATOR_Initialize A92 0 CODE 0 text11 dist/default/production/16f18855-uart.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -999,12 +1074,13 @@ _OSCILLATOR_Initialize 984 0 CODE 0 text11 dist/default/production/16f18855-uart
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text20 0 452 8A4 18 2
-text21 0 47C 8F8 5F 2
-cstackBANK0 1 20 20 3E 1
-intentry 0 4 8 436 2
+text20 0 4F0 9E0 18 2
+text21 0 51A A34 48 2
+intentry 0 4 8 4D4 2
 reset_vec 0 0 0 2 2
-stringtext 0 46A 8D4 12 2
-swtext1 0 43A 874 18 2
+bssBANK0 1 20 20 4C 1
+bssBANK1 1 A0 A0 8 1
+stringtext 0 508 A10 12 2
+swtext1 0 4D8 9B0 18 2
 bssCOMMON 1 70 70 E 1
 config 0 8007 1000E 5 2

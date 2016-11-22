@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"192 mcc_generated_files/pin_manager.h
+"204 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "84 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
@@ -7,7 +7,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _I2C2_Initialize `(v ~T0 @X0 0 ef ]
 "335 mcc_generated_files/tmr6.h
 [v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
-"95 mcc_generated_files/eusart.h
+"106 mcc_generated_files/eusart.h
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
 "21546 /opt/microchip/xc8/v1.38/include/pic16f18855.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@2189 ]
@@ -12609,8 +12609,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;pin_manager.h: 192: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 204: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 204: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 216: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -12671,9 +12671,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;eusart.h: 95: void EUSART_Initialize(void);
-[; ;eusart.h: 115: uint8_t EUSART_Read(void);
-[; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
+[; ;eusart.h: 77: extern volatile uint8_t eusartTxBufferRemaining;
+[; ;eusart.h: 78: extern volatile uint8_t eusartRxCount;
+[; ;eusart.h: 106: void EUSART_Initialize(void);
+[; ;eusart.h: 155: uint8_t EUSART_Read(void);
+[; ;eusart.h: 180: void EUSART_Write(uint8_t txData);
+[; ;eusart.h: 201: void EUSART_Transmit_ISR(void);
+[; ;eusart.h: 222: void EUSART_Receive_ISR(void);
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;i2c2.h: 83: typedef enum
 [; ;i2c2.h: 84: {

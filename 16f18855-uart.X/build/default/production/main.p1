@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "10 main.c
-[c E13634 0 1 2 3 4 5 6 .. ]
-[n E13634 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
+[c E13640 0 1 2 3 4 5 6 .. ]
+[n E13640 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
 "109 mcc_generated_files/i2c2.h
 [s S1520 `ui 1 `uc 1 `*uc 1 ]
 [n S1520 . address length pbuffer ]
@@ -10,7 +10,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "560
 [v _I2C2_MasterReadTRBBuild `(v ~T0 @X0 0 ef4`*S1520`*uc`uc`ui ]
 "516
-[v _I2C2_MasterTRBInsert `(v ~T0 @X0 0 ef3`uc`*S1520`*E13634 ]
+[v _I2C2_MasterTRBInsert `(v ~T0 @X0 0 ef3`uc`*S1520`*E13640 ]
 [p mainexit ]
 "71 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
@@ -44,7 +44,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATAbits `VS42 ~T0 @X0 0 e@22 ]
 "195 /opt/microchip/xc8/v1.38/include/stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"135 mcc_generated_files/eusart.h
+"180 mcc_generated_files/eusart.h
 [v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -12592,8 +12592,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 186: extern unsigned char __resetbits;
 [; ;pic.h: 187: extern __bit __powerdown;
 [; ;pic.h: 188: extern __bit __timeout;
-[; ;pin_manager.h: 192: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 204: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 204: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 216: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -12654,9 +12654,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;eusart.h: 95: void EUSART_Initialize(void);
-[; ;eusart.h: 115: uint8_t EUSART_Read(void);
-[; ;eusart.h: 135: void EUSART_Write(uint8_t txData);
+[; ;eusart.h: 77: extern volatile uint8_t eusartTxBufferRemaining;
+[; ;eusart.h: 78: extern volatile uint8_t eusartRxCount;
+[; ;eusart.h: 106: void EUSART_Initialize(void);
+[; ;eusart.h: 155: uint8_t EUSART_Read(void);
+[; ;eusart.h: 180: void EUSART_Write(uint8_t txData);
+[; ;eusart.h: 201: void EUSART_Transmit_ISR(void);
+[; ;eusart.h: 222: void EUSART_Receive_ISR(void);
 [; ;stddef.h: 6: typedef int ptrdiff_t;
 [; ;i2c2.h: 83: typedef enum
 [; ;i2c2.h: 84: {
@@ -12777,31 +12781,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 "9
 [f ]
 "10
-[v _status `E13634 ~T0 @X0 1 a ]
+[v _status `E13640 ~T0 @X0 1 a ]
 [; ;main.c: 10: I2C2_MESSAGE_STATUS status = I2C2_MESSAGE_PENDING;
-[e = _status . `E13634 2 ]
+[e = _status . `E13640 2 ]
 "11
-[v F13761 `S1520 ~T0 @X0 -> 2 `i s trb ]
+[v F13767 `S1520 ~T0 @X0 -> 2 `i s trb ]
 [; ;main.c: 11: static I2C2_TRANSACTION_REQUEST_BLOCK trb[2];
 [; ;main.c: 13: I2C2_MasterWriteTRBBuild(&trb[0], &reg, 1, 0x38);
 "13
-[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U *U + &U F13761 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13761 `ui `ux &U _reg -> -> 1 `i `uc -> -> 56 `i `ui ]
+[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U *U + &U F13767 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13767 `ui `ux &U _reg -> -> 1 `i `uc -> -> 56 `i `ui ]
 [; ;main.c: 14: I2C2_MasterReadTRBBuild(&trb[1], pData, 1, 0x38);
 "14
-[e ( _I2C2_MasterReadTRBBuild (4 , , , &U *U + &U F13761 * -> -> -> 1 `i `ui `ux -> -> # *U &U F13761 `ui `ux _pData -> -> 1 `i `uc -> -> 56 `i `ui ]
+[e ( _I2C2_MasterReadTRBBuild (4 , , , &U *U + &U F13767 * -> -> -> 1 `i `ui `ux -> -> # *U &U F13767 `ui `ux _pData -> -> 1 `i `uc -> -> 56 `i `ui ]
 [; ;main.c: 15: I2C2_MasterTRBInsert(2, &trb[0], &status);
 "15
-[e ( _I2C2_MasterTRBInsert (3 , , -> -> 2 `i `uc &U *U + &U F13761 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13761 `ui `ux &U _status ]
+[e ( _I2C2_MasterTRBInsert (3 , , -> -> 2 `i `uc &U *U + &U F13767 * -> -> -> 0 `i `ui `ux -> -> # *U &U F13767 `ui `ux &U _status ]
 [; ;main.c: 17: while(status == I2C2_MESSAGE_PENDING);
 "17
 [e $U 1522  ]
 [e :U 1523 ]
 [e :U 1522 ]
-[e $ == -> _status `i -> . `E13634 2 `i 1523  ]
+[e $ == -> _status `i -> . `E13640 2 `i 1523  ]
 [e :U 1524 ]
 [; ;main.c: 19: return (status == I2C2_MESSAGE_COMPLETE);
 "19
-[e ) -> -> == -> _status `i -> . `E13634 0 `i `i `uc ]
+[e ) -> -> == -> _status `i -> . `E13640 0 `i `i `uc ]
 [e $UE 1521  ]
 [; ;main.c: 20: }
 "20
