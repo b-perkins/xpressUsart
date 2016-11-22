@@ -1,0 +1,341 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18855 ]
+[d frameptr 6 ]
+"93 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+[e E13193 . `uc
+TMR6_ROP_STARTS_TMRON 0
+TMR6_ROP_STARTS_TMRON_ERSHIGH 1
+TMR6_ROP_STARTS_TMRON_ERSLOW 2
+TMR6_ROP_RESETS_ERSBOTHEDGE 3
+TMR6_ROP_RESETS_ERSRISINGEDGE 4
+TMR6_ROP_RESETS_ERSFALLINGEDGE 5
+TMR6_ROP_RESETS_ERSLOW 6
+TMR6_ROP_RESETS_ERSHIGH 7
+TMR6_OS_STARTS_TMRON 8
+TMR6_OS_STARTS_ERSRISINGEDGE 9
+TMR6_OS_STARTS_ERSFALLINGEDGE 10
+TMR6_OS_STARTS_ERSBOTHEDGE 11
+TMR6_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR6_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR6_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR6_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR6_OS_STARTS_TMRON_ERSHIGH 22
+TMR6_OS_STARTS_TMRON_ERSLOW 23
+TMR6_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR6_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR6_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"99
+[e E13216 . `uc
+TMR6_T6INPPS 0
+TMR6_T2POSTSCALED 1
+TMR6_T4POSTSCALED 2
+TMR6_RESERVED 3
+TMR6_CCP1_OUT 4
+TMR6_CCP2_OUT 5
+TMR6_CCP3_OUT 6
+TMR6_CCP4_OUT 7
+TMR6_CCP5_OUT 8
+TMR6_PWM6_OUT 9
+TMR6_PWM7_OUT 10
+TMR6_C1_OUT_SYNC 11
+TMR6_C2_OUT_SYNC 12
+TMR6_ZCD_OUTPUT 13
+TMR6_LC1_OUT 14
+TMR6_LC2_OUT 15
+TMR6_LC3_OUT 16
+TMR6_LC4_OUT 17
+]
+"62 /opt/microchip/xc8/v1.37/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.37/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.37/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"5 /home/mittens/code/16f18855-uart.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"55 /home/mittens/code/16f18855-uart.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"77
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"97
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"82 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"91
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"51 /home/mittens/code/16f18855-uart.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"63 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+"104
+[v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
+"115
+[v _TMR6_Stop TMR6_Stop `(v  1 e 1 0 ]
+"126
+[v _TMR6_Counter8BitGet TMR6_Counter8BitGet `(uc  1 e 1 0 ]
+"140
+[v _TMR6_Counter8BitSet TMR6_Counter8BitSet `(v  1 e 1 0 ]
+"151
+[v _TMR6_Period8BitSet TMR6_Period8BitSet `(v  1 e 1 0 ]
+"161
+[v _TMR6_HasOverflowOccured TMR6_HasOverflowOccured `(uc  1 e 1 0 ]
+"572 /opt/microchip/xc8/v1.37/include/pic16f18855.h
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"633
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"694
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"755
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+"816
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"877
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"3416
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"3469
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"3528
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"3597
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"3650
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S24 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3676
+[u S33 . 1 `S24 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES33  1 e 1 @285 ]
+"3829
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+"4008
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"8532
+[v _T6TMR T6TMR `VEuc  1 e 1 @664 ]
+"8537
+[v _TMR6 TMR6 `VEuc  1 e 1 @664 ]
+"8569
+[v _T6PR T6PR `VEuc  1 e 1 @665 ]
+"8574
+[v _PR6 PR6 `VEuc  1 e 1 @665 ]
+"8606
+[v _T6CON T6CON `VEuc  1 e 1 @666 ]
+[s S244 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"8642
+[s S248 . 1 `uc 1 T6OUTPS 1 0 :4:0 
+`uc 1 T6CKPS 1 0 :3:4 
+`uc 1 T6ON 1 0 :1:7 
+]
+[s S252 . 1 `uc 1 T6OUTPS0 1 0 :1:0 
+`uc 1 T6OUTPS1 1 0 :1:1 
+`uc 1 T6OUTPS2 1 0 :1:2 
+`uc 1 T6OUTPS3 1 0 :1:3 
+`uc 1 T6CKPS0 1 0 :1:4 
+`uc 1 T6CKPS1 1 0 :1:5 
+`uc 1 T6CKPS2 1 0 :1:6 
+]
+[s S260 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR6ON 1 0 :1:7 
+]
+[u S269 . 1 `S244 1 . 1 0 `S248 1 . 1 0 `S252 1 . 1 0 `S260 1 . 1 0 ]
+[v _T6CONbits T6CONbits `VES269  1 e 1 @666 ]
+"8751
+[v _T6HLT T6HLT `VEuc  1 e 1 @667 ]
+[s S137 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"8784
+[s S142 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S148 . 1 `uc 1 T6MODE 1 0 :5:0 
+`uc 1 T6CKSYNC 1 0 :1:5 
+`uc 1 T6CKPOL 1 0 :1:6 
+`uc 1 T6PSYNC 1 0 :1:7 
+]
+[s S153 . 1 `uc 1 T6MODE0 1 0 :1:0 
+`uc 1 T6MODE1 1 0 :1:1 
+`uc 1 T6MODE2 1 0 :1:2 
+`uc 1 T6MODE3 1 0 :1:3 
+`uc 1 T6MODE4 1 0 :1:4 
+]
+[u S159 . 1 `S137 1 . 1 0 `S142 1 . 1 0 `S148 1 . 1 0 `S153 1 . 1 0 ]
+[v _T6HLTbits T6HLTbits `VES159  1 e 1 @667 ]
+"8878
+[v _T6CLKCON T6CLKCON `VEuc  1 e 1 @668 ]
+"8923
+[v _T6RST T6RST `VEuc  1 e 1 @669 ]
+[s S206 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"8950
+[s S208 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+]
+[s S214 . 1 `uc 1 T6RSEL 1 0 :5:0 
+]
+[s S216 . 1 `uc 1 T6RSEL0 1 0 :1:0 
+`uc 1 T6RSEL1 1 0 :1:1 
+`uc 1 T6RSEL2 1 0 :1:2 
+`uc 1 T6RSEL3 1 0 :1:3 
+`uc 1 T6RSEL4 1 0 :1:4 
+]
+[u S222 . 1 `S206 1 . 1 0 `S208 1 . 1 0 `S214 1 . 1 0 `S216 1 . 1 0 ]
+[v _T6RSTbits T6RSTbits `VES222  1 e 1 @669 ]
+[s S45 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+"18224
+[u S52 . 1 `S45 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES52  1 e 1 @1807 ]
+[s S94 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"18273
+[u S101 . 1 `S94 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES101  1 e 1 @1808 ]
+"20262
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"20400
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"20495
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"20545
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"20602
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"26633
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3727 ]
+[s S385 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"26643
+[u S387 . 1 `S385 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES387  1 e 1 @3727 ]
+[s S392 . 1 `uc 1 T6AINPPS 1 0 :5:0 
+]
+"27167
+[s S394 . 1 `uc 1 T6AINPPS0 1 0 :1:0 
+`uc 1 T6AINPPS1 1 0 :1:1 
+`uc 1 T6AINPPS2 1 0 :1:2 
+`uc 1 T6AINPPS3 1 0 :1:3 
+`uc 1 T6AINPPS4 1 0 :1:4 
+]
+[u S400 . 1 `S392 1 . 1 0 `S394 1 . 1 0 ]
+[v _T6AINPPSbits T6AINPPSbits `VES400  1 e 1 @3742 ]
+"29411
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @3872 ]
+"29705
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @3878 ]
+"29803
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+"29864
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"29925
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"30413
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"30474
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"30535
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"31023
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"31084
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"31145
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"31633
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"33410
+"33410
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4 /home/mittens/code/16f18855-uart.X/main.c
+[v _toggle toggle `uc  1 e 1 0 ]
+"5
+[v _main main `(v  1 e 1 0 ]
+{
+"32
+} 0
+"161 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+[v _TMR6_HasOverflowOccured TMR6_HasOverflowOccured `(uc  1 e 1 0 ]
+{
+"164
+[v TMR6_HasOverflowOccured@status status `uc  1 a 1 0 ]
+"171
+} 0
+"82 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"63 /home/mittens/code/16f18855-uart.X/mcc_generated_files/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"104
+[v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
+{
+"108
+} 0
+"51 /home/mittens/code/16f18855-uart.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"109
+} 0
+"91 /home/mittens/code/16f18855-uart.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"55 /home/mittens/code/16f18855-uart.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"97
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"104
+} 0
