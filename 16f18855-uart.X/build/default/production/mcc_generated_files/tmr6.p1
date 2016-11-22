@@ -12728,9 +12728,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 64: {
 [e :U _TMR6_Initialize ]
 [f ]
-[; ;tmr6.c: 68: T6CON = 0x70;
+[; ;tmr6.c: 68: T6CON = 0x79;
 "68
-[e = _T6CON -> -> 112 `i `uc ]
+[e = _T6CON -> -> 121 `i `uc ]
 [; ;tmr6.c: 71: T6CLKCON = 0x04;
 "71
 [e = _T6CLKCON -> -> 4 `i `uc ]
@@ -12740,9 +12740,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 77: T6RST = 0x00;
 "77
 [e = _T6RST -> -> 0 `i `uc ]
-[; ;tmr6.c: 80: T6PR = 0xFD;
+[; ;tmr6.c: 80: T6PR = 0xF1;
 "80
-[e = _T6PR -> -> 253 `i `uc ]
+[e = _T6PR -> -> 241 `i `uc ]
 [; ;tmr6.c: 83: T6TMR = 0x00;
 "83
 [e = _T6TMR -> -> 0 `i `uc ]

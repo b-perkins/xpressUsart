@@ -64,8 +64,8 @@ void TMR6_Initialize(void)
 {
     // Set TMR6 to the options selected in the User Interface
 
-    // T6CKPS 1:128; T6OUTPS 1:1; TMR6ON off; 
-    T6CON = 0x70;
+    // T6CKPS 1:128; T6OUTPS 1:10; TMR6ON off; 
+    T6CON = 0x79;
 
     // T6CS LFINTOSC; 
     T6CLKCON = 0x04;
@@ -76,8 +76,8 @@ void TMR6_Initialize(void)
     // T6RSEL T6CKIPPS pin; 
     T6RST = 0x00;
 
-    // PR6 253; 
-    T6PR = 0xFD;
+    // PR6 241; 
+    T6PR = 0xF1;
 
     // TMR6 0; 
     T6TMR = 0x00;
