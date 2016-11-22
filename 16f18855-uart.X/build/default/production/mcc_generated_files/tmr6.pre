@@ -16872,7 +16872,7 @@ T6HLT = 0x00;
 T6RST = 0x00;
 
 
-T6PR = 0xF1;
+T6PR = 0x2F;
 
 
 T6TMR = 0x00;
@@ -16961,6 +16961,7 @@ if(status)
 {
 
 PIR4bits.TMR6IF = 0;
+T6TMR = 0x00;
 }
 return status;
 }

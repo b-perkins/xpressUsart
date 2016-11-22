@@ -166,6 +166,7 @@ bool TMR6_HasOverflowOccured(void)
     {
         // Clearing IF flag.
         PIR4bits.TMR6IF = 0;
+        T6TMR = 0x00;   //  Stop the timer when it overflows
     }
     return status;
 }

@@ -12740,9 +12740,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 77: T6RST = 0x00;
 "77
 [e = _T6RST -> -> 0 `i `uc ]
-[; ;tmr6.c: 80: T6PR = 0xF1;
+[; ;tmr6.c: 80: T6PR = 0x2F;
 "80
-[e = _T6PR -> -> 241 `i `uc ]
+[e = _T6PR -> -> 47 `i `uc ]
 [; ;tmr6.c: 83: T6TMR = 0x00;
 "83
 [e = _T6TMR -> -> 0 `i `uc ]
@@ -12983,15 +12983,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr6.c: 168: PIR4bits.TMR6IF = 0;
 "168
 [e = . . _PIR4bits 0 5 -> -> 0 `i `uc ]
+[; ;tmr6.c: 169: T6TMR = 0x00;
 "169
+[e = _T6TMR -> -> 0 `i `uc ]
+"170
 }
 [e :U 1533 ]
-[; ;tmr6.c: 169: }
-[; ;tmr6.c: 170: return status;
-"170
+[; ;tmr6.c: 170: }
+[; ;tmr6.c: 171: return status;
+"171
 [e ) _status ]
 [e $UE 1532  ]
-[; ;tmr6.c: 171: }
-"171
+[; ;tmr6.c: 172: }
+"172
 [e :UE 1532 ]
 }

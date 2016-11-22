@@ -30,8 +30,9 @@ void main(void)
 
     while (1)
     {
-        if (TMR6_HasOverflowOccured())
+        if (!BTN2_PORT && T6TMR == 0x00)
         {
+            TMR6_Start();
             LED1_Toggle();
             printf("\n");
             EUSART_Write(carriageReturn);
