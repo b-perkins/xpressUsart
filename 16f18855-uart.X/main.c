@@ -30,21 +30,37 @@ void main(void)
 
     while (1)
     {
-        if (EUSART_Read() == 'G' && T6TMR == 0x00)  //  0x47 = 'G'
+        if (TMR4_HasOverflowOccured())  //  operates on 1 second interval
         {
-            TMR6_Start();
-            LED1_Toggle();
-            printf("\n");
-            EUSART_Write(carriageReturn);
-
-            if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) 
+            LED3_SetHigh();
+            data = EUSART_Read();       // read the eusart every second regardless
+            if (data == 'G' && T6TMR == 0x00)  //  0x47 = 'G'
             {
-                EMC1001_Read(TEMP_LO, &templo);     // get lsb 
-                templo = templo >> 6;                   
-                if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
-                printf("%d.%d", temp, templo*25);
+                TMR6_Start();
+                LED1_Toggle();
+                printf("\n");
+                EUSART_Write(carriageReturn);
+
+                if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) 
+                {
+                    EMC1001_Read(TEMP_LO, &templo);     // get lsb 
+                    templo = templo >> 6;                   
+                    if (temp < 0) templo = 3-templo;    // complement to 1 if T negative
+                    printf("%d.%d", temp, templo*25);
+                }
+                TMR6_Stop();
             }
-            TMR6_Stop();
+            else if (data != 0x00 && T6TMR == 0x00)  // 0x00 = null, 0x47 = 'G'
+            {
+                TMR6_Start();
+                printf("\n");
+                EUSART_Write(carriageReturn);
+                printf("Unrecognized input : ");
+                EUSART_Write(data);
+                EUSART_Write(carriageReturn);
+                TMR6_Stop();
+            }
+            LED3_SetLow();
         }
     }
 }
