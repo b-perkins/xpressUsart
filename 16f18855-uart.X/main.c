@@ -42,6 +42,7 @@ void main(void)
     uint8_t data;
     uint8_t templo;
     uint8_t failcount = 0x00;
+    uint16_t fullTemp = 0x0000;
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
@@ -51,7 +52,7 @@ void main(void)
 
     while (1)
     {
-        if (TMR4_HasOverflowOccured())  //  operates on 1 second interval
+        if (PIR3bits.RCIF)  //  operates on 1 second interval
         {
             LED3_Toggle();
             data = EUSART_Read();       // read the eusart every second regardless
@@ -68,7 +69,8 @@ void main(void)
                     templo = templo >> 6;                   
                     if (temp < 0) 
                         templo = 3-templo;    // complement to 1 if T negative
-                    EUSART_Write(0x4F); //  0x4F just because
+                    EUSART_Write('K'); //  k (0x4B) just because
+
 //                    EUSART_Write((uint8_t)temp);
 //                    EUSART_Write(period);
 //                    EUSART_Write(templo*25);

@@ -127,7 +127,7 @@ uint8_t TMR4_Counter8BitGet(void)
 {
     uint8_t readVal;
 
-    readVal = TMR4;
+    readVal = T4TMR ;
 
     return readVal;
 }
@@ -140,7 +140,7 @@ uint8_t TMR4_ReadTimer(void)
 void TMR4_Counter8BitSet(uint8_t timerVal)
 {
     // Write to the Timer4 register
-    TMR4 = timerVal;
+    T4TMR = timerVal;
 }
 
 void TMR4_WriteTimer(uint8_t timerVal)
