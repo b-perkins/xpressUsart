@@ -128,7 +128,7 @@ uint8_t TMR6_Counter8BitGet(void)
 {
     uint8_t readVal;
 
-    readVal = TMR6;
+    readVal = T6TMR ;
 
     return readVal;
 }
@@ -141,7 +141,7 @@ uint8_t TMR6_ReadTimer(void)
 void TMR6_Counter8BitSet(uint8_t timerVal)
 {
     // Write to the Timer6 register
-    TMR6 = timerVal;
+    T6TMR  = timerVal;
 }
 
 void TMR6_WriteTimer(uint8_t timerVal)
