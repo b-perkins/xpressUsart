@@ -74,7 +74,7 @@ void main(void)
 
                     EUSART_Write((uint8_t)temp);
                     EUSART_Write(templo*25);
-                    EUSART_Write('L'); //  LL as stop bit
+                    //EUSART_Write('L'); //  LL as stop bit
                 }
                 TMR6_Stop();
             }
