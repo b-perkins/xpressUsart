@@ -53,16 +53,16 @@ void main(void)
     while (1)
     {
         if (TMR4_HasOverflowOccured())
-            LED4_Toggle();  //  just an indicator that things are working
+            //LED4_Toggle();  //  just an indicator that things are working
         
         if (PIR3bits.RCIF)  //  operates on 1 second interval
         {
-            LED3_Toggle();
+            //LED3_Toggle();
             data = EUSART_Read();       // read the eusart every second regardless
             if (data == 'G' && T6TMR == 0x00)  //  0x47 = 'G'
             {
                 TMR6_Start();
-                LED1_Toggle();
+                //LED1_Toggle();
 
                 if (EMC1001_Read(TEMP_HI, (uint8_t*)&temp)) 
                 {
@@ -74,7 +74,6 @@ void main(void)
 
                     EUSART_Write((uint8_t)temp);
                     EUSART_Write(templo*25);
-                    //printf("%d.%d", temp, templo*25);
                     EUSART_Write('L'); //  LL as stop bit
                 }
                 TMR6_Stop();

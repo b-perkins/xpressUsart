@@ -77,7 +77,7 @@ void EUSART_Initialize(void)
 
 uint8_t EUSART_Read(void)
 {
-    LED2_Toggle();
+    //LED2_Toggle();
     while(!PIR3bits.RCIF)
     {
     }
